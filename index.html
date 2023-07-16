@@ -6,7 +6,10 @@
         <meta name="comment?" content="Welcome">
     </head>
     <body style="background-color: #203765">
-        <div> 
+        <div style="z-index: -1;"> 
+            <div class="position-absolute">
+                <div class="blob1"></div>
+            </div>
             <div class="position-absolute" style="right: 0px; top: 20em;">
                 <svg class="blob" viewBox="-100 0 200 170" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#31508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" />
@@ -15,7 +18,8 @@
             <div class="position-absolute" style="right: 0px; top: 10;">
                 <svg class="blob" viewBox="130 120 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#2B4880" d="M48.4,-45.3C62.8,-34,74.6,-17,76.6,2C78.6,21,70.9,42.1,56.5,56.4C42.1,70.6,21,78.2,6.4,71.7C-8.2,65.3,-16.4,45,-31.1,30.7C-45.7,16.4,-66.8,8.2,-69.8,-3C-72.8,-14.2,-57.7,-28.4,-43,-39.7C-28.4,-51,-14.2,-59.5,1.4,-60.9C17,-62.3,34,-56.7,48.4,-45.3Z" transform="translate(100 100)" />
-                  </svg>
+                    <path fill="#31508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" />
+                </svg>
             </div>
             <div class="position-absolute" style="right: 0px; top: 0;">
                 <svg class="blob" viewBox="-100 80 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -33,34 +37,53 @@
                   </svg>
             </div>
         </div>
-        <div id="pageButtons">
-            <button id="currentPageButton">About</button>
-            <button onclick="window.location.href='https://github.com/dfchang149/dfchang149.github.io/resumePage.html';">Resume</button>
-            <button onclick="window.location.href='https://github.com/dfchang149/dfchang149.github.io/projectsPage.html';">Projects</button>
+        <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
+            <button onclick="topFunction()" id="currentPageButton">About</button>
+            <button onclick="window.location.href='resumePage.html';">Resume</button>
+            <button onclick="window.location.href='projectsPage.html';">Projects</button>
         </div>
         <div id="contents">
             <div>
-                <h1 style="margin-top: 196px;">
+                <h1 style="margin-top: 164px;">
                     Hi, I'm Dustin Chang
                 </h1>
-                <h2 style="margin-top: -32px;">
+                <h2 id="whoAmI" data-period="2000" data-type='["A computer science student from UCSD","An avid gamer","A future game developer","A storyteller","A web designer"]' style="margin-top: -32px;">
                     A Computer Science student from UCSD
                 </h2>
             </div>
             <div style="text-align: center; margin-top: 3em;">
-                <a href="https://github.com/dfchang149/dfchang149" aria-label="Homepage" class="footer-octicon" title="My GitHub">
+                <a href="https://github.com/dfchang149" aria-label="Homepage" class="footer-octicon" title="My GitHub">
                     <svg class="logo" aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
                     </svg>
                 </a>
             </div>
-            <div class="container" style="margin-top: 4em;">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+            <div id="aboutGridContainer">
+                <div class="container text animation" style="margin-top: 2em; grid-area: body1;">
+                    <h3>
+                        Who Am I?
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="container text animation" style="grid-area: body2; --animation-order: 1;">
+                    <h3>
+                        My Goals and Interests
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="container animation" style="grid-area: image; --animation-order: 2;">
+                    <img class="profilePicture" style="border-radius: 16px;" width="100%" src="https://avatars.githubusercontent.com/u/103155912?" alt="GitHub Profile Picture">
+                </div>
             </div>
             <div class="footer">
                 <p id="copyright">© 2023 Dustin Chang</p>
             </div>
         </div>
+
+        <script src="scrollToTop.js"></script>
+        <script src="scrollAnimation.js"></script>
     </body>
 </html>
