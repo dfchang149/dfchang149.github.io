@@ -38,9 +38,17 @@
             </div>
         </div>
         <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
-            <button onclick="topFunction()" id="currentPageButton">About</button>
+            <button
+                onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
+                id="currentPageButton">
+                About
+            </button>
             <button onclick="window.location.href='resumePage.html';">Resume</button>
             <button onclick="window.location.href='projectsPage.html';">Projects</button>
+        </div>
+        <div id="goTop">
+            <div class="arrowUp center"></div>
+                Go back to top
         </div>
         <div id="contents">
             <div>

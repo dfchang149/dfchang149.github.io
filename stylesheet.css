@@ -77,6 +77,46 @@ img {
     margin-right: 10%;
 }
 
+.arrowUp {
+    margin: 2px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #C2DBFF;
+    opacity: 0.8;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#goTop {
+    border-radius: 24px;
+    backdrop-filter: blur(3em);
+    box-shadow: 0px 4px 8px #10062420;
+    background-color: #3c5c9c79;
+    border: #7db1ff15 solid 1px;
+    position: fixed;
+    font-size: 12px;
+    padding: 8px 16px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 8em;
+    text-align: center;
+    z-index: 5;
+    transition: 0.25s;
+    transition-delay: 1s;
+    
+    opacity: 0;
+}
+
 #pageButtons {
     -webkit-font-smoothing: antialiased;
     border-radius: 16;
@@ -86,7 +126,7 @@ img {
     border: #7db1ff00 solid 0px;
     border-radius: 36px;
     padding: 8px;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     width: fit-content;
     margin-left: auto;
@@ -185,7 +225,7 @@ h3 {
     font-size: 18px;
 }
 
-p {
+p, div {
     font-family: Segoe UI;
     color: #C2DBFF;
     z-index: 1;

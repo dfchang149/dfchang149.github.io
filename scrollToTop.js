@@ -1,5 +1,6 @@
 // Get the button:
 let button = document.getElementById("currentPageButton");
+let goTopLabel = document.getElementById("goTop");
 let pageButtons = document.getElementById("pageButtons");
 let body = document.body;
 let docElement =  document.documentElement;
@@ -7,6 +8,21 @@ let scrollBound = 50
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
+
+function mouseOverCurrPageButton() {
+    if(body.scrollTop != 0 || docElement.scrollTop != 0) {
+        goTopLabel.style.opacity = 1;
+        goTopLabel.style.scale = 1;
+        goTopLabel.style.transitionDelay = "0.5s";
+        goTopLabel.style.transform = "scale(1) translateY(0px)";
+    }
+}
+
+function mouseLeaveCurrPageButton() {
+    goTopLabel.style.opacity = 0;
+    goTopLabel.style.scale = 0.8;
+    goTopLabel.style.transform = "scale(0.8) translateY(-50%)";
+}
 
 function mouseOverPageButtons() {
     if(body.scrollTop <= scrollBound && docElement.scrollTop <= scrollBound){
@@ -32,6 +48,9 @@ function scrollFunction() {
         pageButtons.style.boxShadow = "0px 4px 8px #10062420";
         pageButtons.style.border = "#7db1ff15 solid 1px";
     } else {
+        goTopLabel.style.transitionDelay = "0s";
+        mouseLeaveCurrPageButton();
+
         pageButtons.style.backgroundColor = "#3c5c9c00";
         pageButtons.style.boxShadow = "0px 4px 12px #10062400";
         pageButtons.style.border = "#7db1ff00 solid 0px";
@@ -40,6 +59,9 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    body.scrollTop = 0; // For Safari
+    docElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+goTopLabel.style.transitionDelay = "0s";
+mouseLeaveCurrPageButton();
