@@ -6,7 +6,7 @@
         <meta name="comment?" content="Welcome">
     </head>
     <body style="background-color: #203765">
-        <div style="z-index: -1;"> 
+        <div> 
             <div class="position-absolute">
                 <div class="blob1"></div>
             </div>
@@ -39,7 +39,7 @@
         </div>
         <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
             <button
-                onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
+                onmousedown="mouseDownCurrPageButton()" onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
                 id="currentPageButton">
                 About
             </button>
@@ -51,11 +51,11 @@
                 Go back to top
         </div>
         <div id="contents">
-            <div>
+            <div style="position: relative;">
                 <h1 style="margin-top: 164px;">
                     Hi, I'm Dustin Chang
                 </h1>
-                <h2 id="whoAmI" data-period="2000" data-type='["A computer science student from UCSD","An avid gamer","A future game developer","A storyteller","A web designer"]' style="margin-top: -32px;">
+                <h2 data-period="2000" data-type='["A computer science student from UCSD","An avid gamer","A future game developer","A storyteller","A web designer"]' style="margin-top: -32px;">
                     A Computer Science student from UCSD
                 </h2>
             </div>
@@ -70,7 +70,7 @@
                     <h3>
                         Who Am I?
                     </h3>
-                    <p>
+                    <p class="light">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
@@ -78,12 +78,18 @@
                     <h3>
                         My Goals and Interests
                     </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="light">
+                        Back in 2016, I picked up an interest in <span class="highlight">game design</span>, and tried creating my own games on a children's gaming platform called <span class="highlight">Roblox</span>. In doing so, I stumbled into <span class="highlight">game development</span>, and gained a passion for making my own games. Although my games never gained traction, my interests in coding have only grown, and, since recently, I've built my own app on the <span class="highlight">Microsoft App Store</span>.
+                    </p>
+                    <p class="light">
+                        My main goal is to continue learning new programming languages and widen my skillset as a programmer, in order to <span class="highlight">develop apps</span> and software that I can only dream of.
+                    </p>
+                    <p class="light">
+                        When I'm not creating or programming, I like to revisit my past and experience what the newer generation of games Roblox has to offer, with the hopes of one day creating something as <span class="highlight">successful and entertaining</span>, whether its on-platform or off.
                     </p>
                 </div>
                 <div class="container animation" style="grid-area: image; --animation-order: 2;">
-                    <img class="profilePicture" style="border-radius: 16px;" width="100%" src="https://avatars.githubusercontent.com/u/103155912?" alt="GitHub Profile Picture">
+                    <img class="profilePicture" style="border-radius: 16px;" src="https://avatars.githubusercontent.com/u/103155912?" alt="GitHub Profile Picture">
                 </div>
             </div>
             <div class="footer">

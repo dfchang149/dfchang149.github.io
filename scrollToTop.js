@@ -9,19 +9,30 @@ let scrollBound = 50
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+function mouseDownCurrPageButton() {
+    if(goTopLabel.style.opacity > 0) {
+        goTopLabel.style.transitionDelay = "0s";
+        goTopLabel.style.padding = "6px 20px";
+        goTopLabel.style.transform = "scale(1) translateY(8px)";
+    }
+}
+
 function mouseOverCurrPageButton() {
     if(body.scrollTop != 0 || docElement.scrollTop != 0) {
         goTopLabel.style.opacity = 1;
         goTopLabel.style.scale = 1;
         goTopLabel.style.transitionDelay = "0.5s";
-        goTopLabel.style.transform = "scale(1) translateY(0px)";
+        goTopLabel.style.padding = "8px 16px";
+        goTopLabel.style.transform = "scale(1) translateY(0%)";
     }
 }
 
-function mouseLeaveCurrPageButton() {
-    goTopLabel.style.opacity = 0;
-    goTopLabel.style.scale = 0.8;
-    goTopLabel.style.transform = "scale(0.8) translateY(-50%)";
+function mouseLeaveCurrPageButton(bypass) {
+    if(goTopLabel.style.opacity > 0 || bypass == true) {
+        goTopLabel.style.opacity = 0;
+        goTopLabel.style.padding = "8px 16px";
+        goTopLabel.style.transform = "scale(0.8) translateY(-30%)";    
+    }
 }
 
 function mouseOverPageButtons() {
@@ -59,9 +70,13 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
+    goTopLabel.style.transitionDelay = "0s";
+    mouseLeaveCurrPageButton();
     body.scrollTop = 0; // For Safari
     docElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 goTopLabel.style.transitionDelay = "0s";
-mouseLeaveCurrPageButton();
+mouseLeaveCurrPageButton(true);
+
+scrollFunction();

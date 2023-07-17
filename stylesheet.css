@@ -7,6 +7,7 @@ html {
     margin-left: 1em;
     margin-right: 1em;
     margin-top: 2em;
+    z-index: 1 !important;
 }
 
 .position-absolute{
@@ -37,7 +38,7 @@ html {
 
 .scroll-animation {
     opacity: 1;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-name: fadeInDown;
 }
@@ -58,7 +59,11 @@ html {
     padding: 8px;
     margin: -8px;
     scale: 0.9;
-    max-height: 324px;
+    width: 100%;
+    
+    max-height: 384px;
+    max-width: 384px;
+    aspect-ratio: 1;
 }
 
 img {
@@ -111,10 +116,22 @@ img {
     top: 8em;
     text-align: center;
     z-index: 5;
-    transition: 0.25s;
+    transition-duration: 0.25s;
     transition-delay: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
     opacity: 0;
+}
+
+@keyframes goTopAppear {
+    0% {
+        transform: translateY(-24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 #pageButtons {
@@ -156,7 +173,7 @@ button {
 }
   
 #pageButtons button:hover {
-    transform: scale(1.025);
+    transform: scale(1.05);
     color: #C2DBFF;
 }
 
@@ -194,14 +211,6 @@ svg.blob {
     background: none;
 }
 
-.blob1 {
-    display: block;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-image: url('data:image/svg+xml,<svg class="blob" viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg"><path fill="%2331508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" /></svg>');
-    background-position: center center;
-}
-
 h1 {
     color: #7DB1FF;
     font-family: Segoe UI;
@@ -219,16 +228,27 @@ h2 {
 }
 
 h3 {
-    color: #6599E4;
+    color: #6aa8ff;
     font-family: Segoe UI;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 p, div {
     font-family: Segoe UI;
     color: #C2DBFF;
-    z-index: 1;
+}
+
+p.light {
+    color: #88a5ce;
+}
+
+p {
+    line-height: 24px;
+}
+
+.highlight {
+    color: #dceaff;
 }
 
 .footer {
