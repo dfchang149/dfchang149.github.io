@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    min-width: 512px;
+    min-width: 256px;
 }
 
 ::selection {
@@ -33,6 +33,7 @@ svg.logo:hover {
     opacity: 1;
     fill:#e9f2ff;
     transform: rotate(10deg) scale(0.95);
+    aspect-ratio: 1;
 }
 
 svg.blob {
@@ -257,8 +258,8 @@ a:active {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+    left: 32px;
+    right: 32px;
     text-align: center;
     top: 1.5em;
     transition: all 0.25s;
@@ -273,6 +274,7 @@ a:active {
     margin-left: 2px;
     border-radius: 32px;
     font-size: 110%;
+    min-height: 2em;
     color: #99c2ff;
     transition: all 0.25s;
 }
@@ -352,4 +354,49 @@ a:active {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Responsive */
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    #aboutGridContainer {
+        grid-template-areas:
+        'body1'
+        'image'
+        'body2';
+    }
+    
+    #pageButtons button {
+        font-size: 150%;
+    }
+
+    #goTop {
+        top: 7em;
+        font-size: 16px;
+    }
+
+    svg.logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .profilePicture {
+        max-height: max-content;
+        max-width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .container{
+        padding: 16px 16px;
+    }
+
+    .container.text{
+        padding: 32px 64px;
+    }
+}
+
+/* For smaller mobile phones: */
+@media only screen and (max-width: 600px) {
+    
 }
