@@ -149,14 +149,15 @@ a:active {
     position: relative;
     border-radius: 16px;
     outline: #7592C9 solid 2px;
-    padding: 8px;
-    margin: -8px;
+    outline-offset: 8px;
     scale: 0.9;
     width: 100%;
     
     max-height: 384px;
     max-width: 384px;
     aspect-ratio: 1;
+    transition: all 1s;
+    transition-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .imageWrapper {
@@ -168,6 +169,13 @@ a:active {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+}
+
+.imageWrapper:hover .profilePicture {
+    padding: 0;
+    margin: 0;
+    outline: #7592C9 solid 3px;
+    outline-offset: 0px;
 }
 
 .imageCaption {
@@ -267,9 +275,9 @@ a:active {
     top: 8em;
     text-align: center;
     z-index: 5;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-duration: 0.25s;
     transition-delay: 1s;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
     opacity: 0;
 }
