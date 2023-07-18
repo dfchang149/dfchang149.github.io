@@ -1,69 +1,15 @@
+/* Elements */
+
 html {
     scroll-behavior: smooth;
     min-width: 512px;
 }
 
-#contents {
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-top: 2em;
-    z-index: 1 !important;
-}
-
-.position-absolute{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.hidden {
-    display: none;
-}
-
-.container{
-    position: relative;
-    background-color: #0f1d3995;
-    border-radius: 24px;
-    color: #C2DBFF;
-    box-shadow: 0px 4px 24px #10062428;
-    padding: 8px 8px;
-    backdrop-filter: blur(0.5em);
-    transition: all 0.5s;
-    outline: #3f599275 solid 1px;
-}
-
-.animation {
-    opacity: 0;
-}
-
-.scroll-animation {
-    opacity: 1;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-name: fadeInDown;
-}
-
-.container.text{
-    padding: 16px 32px;
-}
-
-.container:hover{
-    background-color: #0f1d39b2;
-    backdrop-filter: blur(1em);
-}
-
-.profilePicture {
-    position: relative;
-    border-radius: 16px;
-    outline: #7592C9 solid 2px;
-    padding: 8px;
-    margin: -8px;
-    scale: 0.9;
-    width: 100%;
-    
-    max-height: 384px;
-    max-width: 384px;
-    aspect-ratio: 1;
+::selection {
+    /* Change highlight background color */
+    background: #2e529b;
+    /* Change highlight text color */
+    color: #ffffff;
 }
 
 img {
@@ -71,125 +17,8 @@ img {
     min-width: 32px;
 }
 
-#aboutGridContainer {
-    display: grid;
-    grid-template-areas:
-        'body1 body1 '
-        'body2 image';
-    gap: 32px;
-    margin-top: 4em;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.arrowUp {
-    margin: 2px;
-    width: 0; 
-    height: 0; 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #C2DBFF;
-    opacity: 0.8;
-}
-
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-}
-
-#goTop {
-    border-radius: 24px;
-    backdrop-filter: blur(3em);
-    box-shadow: 0px 4px 8px #10062420;
-    background-color: #3c5c9c79;
-    border: #7db1ff15 solid 1px;
-    position: fixed;
-    font-size: 12px;
-    padding: 8px 16px;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 8em;
-    text-align: center;
-    z-index: 5;
-    transition-duration: 0.25s;
-    transition-delay: 1s;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
-    opacity: 0;
-}
-
-@keyframes goTopAppear {
-    0% {
-        transform: translateY(-24px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-#pageButtons {
-    -webkit-font-smoothing: antialiased;
-    border-radius: 16;
-    backdrop-filter: blur(3em);
-    background-color: #2b478000;
-    box-shadow: 0px 4px 12px #10062400;
-    border: #7db1ff00 solid 0px;
-    border-radius: 36px;
-    padding: 8px;
-    z-index: 5;
-    position: fixed;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    top: 1.5em;
-    transition: all 0.25s;
-}
-
 button {
     font-family: 'Segoe UI';
-}
-
-#pageButtons button {
-    background: none;
-    border: none;
-    padding: 8px 24px;
-    padding-bottom: 10px;
-    margin-right: 2px;
-    margin-left: 2px;
-    border-radius: 32px;
-    font-size: 110%;
-    color: #99c2ff;
-    transition: all 0.25s;
-}
-  
-#pageButtons button:hover {
-    transform: scale(1.05);
-    color: #C2DBFF;
-}
-
-#pageButtons button:active {
-    transform: scale(0.95);
-}
-
-#pageButtons #currentPageButton {
-    background: #1F2847;
-    box-shadow: 0px 4px 12px #10062400;
-    color: #C2DBFF;
-}
-
-#currentPageButton:hover {
-    box-shadow: 0px 4px 8px #10062428;
-    color: #e9f2ff;
 }
 
 svg.logo {
@@ -234,6 +63,13 @@ h3 {
     font-size: 22px;
 }
 
+h4 {
+    color: #598fdb;
+    font-family: Segoe UI;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 p, div {
     font-family: Segoe UI;
     color: #C2DBFF;
@@ -247,18 +83,236 @@ p {
     line-height: 24px;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: #C2DBFF;
+}
+
+/* visited link */
+a:visited {
+    color: #C2DBFF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #dceaff;
+}
+
+/* selected link */
+a:active {
+    color: #C2DBFF;
+}
+
+/* Classes */
+
+.highlight::selection {
+    color: #6aa8ff;
+}
+
+.position-absolute{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container{
+    position: relative;
+    background-color: #0f1d3995;
+    border-radius: 24px;
+    color: #C2DBFF;
+    box-shadow: 0px 4px 24px #10062428;
+    padding: 8px 8px;
+    backdrop-filter: blur(0.5em);
+    transition: all 0.5s;
+    outline: #3f599275 solid 1px;
+}
+
+.container.text{
+    padding: 16px 32px;
+}
+
+.container:hover{
+    background-color: #0f1d39b2;
+    backdrop-filter: blur(1em);
+}
+
+.profilePicture {
+    position: relative;
+    border-radius: 16px;
+    outline: #7592C9 solid 2px;
+    padding: 8px;
+    margin: -8px;
+    scale: 0.9;
+    width: 100%;
+    
+    max-height: 384px;
+    max-width: 384px;
+    aspect-ratio: 1;
+}
+
+.arrowUp {
+    margin: 2px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #C2DBFF;
+    opacity: 0.8;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
 .highlight {
     color: #dceaff;
 }
 
 .footer {
-    z-index: 2;
-    margin-top: 30em;
+    position: relative;
+    margin-top: 20em;
+    margin-bottom: 5em;
+    width: 80%;
+    max-width: 100%;
+    vertical-align: bottom;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerCol {
+    width: 50%;
+    position: relative;
+}
+
+.contactInfo {
+    text-align: right;
+    position: bottom right;
+}
+
+/* Id's */
+
+#contents {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    z-index: 1 !important;
+}
+
+#aboutGridContainer {
+    display: grid;
+    grid-template-areas:
+        'body1 body1 '
+        'body2 image';
+    gap: 32px;
+    margin-top: 4em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#goTop {
+    border-radius: 24px;
+    backdrop-filter: blur(3em);
+    box-shadow: 0px 4px 8px #10062420;
+    background-color: #3c5c9c79;
+    border: #7db1ff15 solid 1px;
+    position: fixed;
+    font-size: 12px;
+    padding: 8px 16px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 8em;
+    text-align: center;
+    z-index: 5;
+    transition-duration: 0.25s;
+    transition-delay: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    opacity: 0;
+}
+
+#pageButtons {
+    -webkit-font-smoothing: antialiased;
+    border-radius: 16;
+    backdrop-filter: blur(3em);
+    background-color: #2b478000;
+    box-shadow: 0px 4px 12px #10062400;
+    border: #7db1ff00 solid 0px;
+    border-radius: 36px;
+    padding: 8px;
+    z-index: 5;
+    position: fixed;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 1.5em;
+    transition: all 0.25s;
+}
+
+#pageButtons button {
+    background: none;
+    border: none;
+    padding: 8px 24px;
+    padding-bottom: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 32px;
+    font-size: 110%;
+    color: #99c2ff;
+    transition: all 0.25s;
+}
+  
+#pageButtons button:hover {
+    transform: scale(1.05);
+    color: #C2DBFF;
+}
+
+#pageButtons button:active {
+    transform: scale(0.95);
+}
+
+#pageButtons #currentPageButton {
+    background: #1F2847;
+    box-shadow: 0px 4px 12px #10062400;
+    color: #C2DBFF;
+}
+
+#currentPageButton:hover {
+    box-shadow: 0px 4px 8px #10062428;
+    color: #e9f2ff;
 }
 
 #copyright {
-    color: #C2DBFF;
     position: bottom left;
+    height: max-content;
+}
+
+/* Animations */
+.animation {
+    opacity: 0;
+}
+
+.scroll-animation {
+    opacity: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeInDown;
 }
 
 @keyframes fadeInDown {
@@ -287,5 +341,16 @@ p {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes goTopAppear {
+    0% {
+        transform: translateY(-24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
