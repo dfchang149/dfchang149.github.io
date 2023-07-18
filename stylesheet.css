@@ -324,6 +324,10 @@ a:active {
     color: #C2DBFF;
 }
 
+#whoAmI {
+    margin-top: -32px;
+}
+
 #currentPageButton:hover {
     box-shadow: 0px 4px 8px #10062428;
     color: #e9f2ff;
@@ -416,6 +420,10 @@ a:active {
         font-size: 16px;
     }
 
+    #whoAmI {
+        margin-top: -16px;
+    }
+
     svg.logo {
         width: 32px;
         height: 32px;
@@ -432,11 +440,15 @@ a:active {
     }
 
     .container.text{
-        padding: 0px 28px 12px 28px;
+        padding: 8px 28px 12px 28px;
     }
 
     .imageCaption {
         font-size: 18px;
+    }
+
+    .footer {
+        padding: 32px 10% 32px 10%;
     }
 }
 
@@ -455,14 +467,18 @@ a:active {
     }
 
     .container.text{
-        padding: 0px 24px 8px 24px;
+        padding: 4px 24px 8px 24px;
+    }
+
+    .imageCaption {
+        font-size: 16px;
     }
 
     #pageButtons button {
         font-size: 100%;
     }
 
-    .imageCaption {
-        font-size: 16px;
+    #whoAmI {
+        margin-top: -8px;
     }
 }
