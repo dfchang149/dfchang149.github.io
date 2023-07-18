@@ -181,13 +181,12 @@ a:active {
 
 .footer {
     position: relative;
-    margin-top: 20em;
-    margin-bottom: 5em;
-    width: 80%;
-    max-width: 100%;
     vertical-align: bottom;
     display: flex;
     flex-wrap: wrap;
+    background-color: #172b56;
+    padding: 32px 15% 32px 15%;
+    margin: 20em -8px -8px -8px;
 }
 
 .footerCol {
