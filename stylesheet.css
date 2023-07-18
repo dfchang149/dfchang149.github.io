@@ -366,13 +366,9 @@ a:active {
         'image'
         'body2';
     }
-    
-    #pageButtons button {
-        font-size: 150%;
-    }
 
     #goTop {
-        top: 7em;
+        top: 6em;
         font-size: 16px;
     }
 
