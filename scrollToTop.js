@@ -5,6 +5,7 @@ let pageButtons = document.getElementById("pageButtons");
 let body = document.body;
 let docElement =  document.documentElement;
 let scrollBound = 50
+let isOverPageButtons = false;
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -40,8 +41,8 @@ function mouseOverPageButtons() {
         pageButtons.style.backgroundColor = "#3c5c9c3d";
         pageButtons.style.border = "#7db1ff08 solid 1px";
     }
+    isOverPageButtons = true;
     pageButtons.style.transform ="translateY(4px)";
-    //pageButtons.style.transform ="scale(1.01)";
 }
 
 function mouseLeavePageButtons() {
@@ -49,8 +50,8 @@ function mouseLeavePageButtons() {
         pageButtons.style.backgroundColor = "#3c5c9c00";
         pageButtons.style.border = "#7db1ff00 solid 0px";
     }
+    isOverPageButtons = false;
     pageButtons.style.transform ="translateY(0px)";
-    //pageButtons.style.transform ="scale(1)";
 }
 
 function scrollFunction() {
@@ -62,9 +63,13 @@ function scrollFunction() {
         goTopLabel.style.transitionDelay = "0s";
         mouseLeaveCurrPageButton();
 
-        pageButtons.style.backgroundColor = "#3c5c9c00";
+        if (isOverPageButtons) {
+            mouseOverPageButtons();
+        } else {
+            pageButtons.style.backgroundColor = "#3c5c9c00";
+            pageButtons.style.border = "#7db1ff00 solid 0px";
+        }
         pageButtons.style.boxShadow = "0px 4px 12px #10062400";
-        pageButtons.style.border = "#7db1ff00 solid 0px";
     }
 }
 
