@@ -159,6 +159,36 @@ a:active {
     aspect-ratio: 1;
 }
 
+.imageWrapper {
+    position: relative;
+    text-align: center
+}
+
+.imageWrapper:hover .imageCaption {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.imageCaption {
+    position: absolute;
+    top: auto;
+    bottom: 10%;
+    background-color: #3c5c9c6d;
+    box-shadow: 0px 4px 8px #10062420;
+    border: #7db1ff15 solid 1px;
+    border-radius: 8px;
+    backdrop-filter: blur(1em);
+    font-size: 14px;
+    width: 80%;
+    padding: 8px 4px 8px 4px;
+    
+    transform: translateY(-20%);
+    visibility: hidden;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
 .arrowUp {
     margin: 2px;
     width: 0; 
@@ -365,6 +395,20 @@ a:active {
         'body1'
         'image'
         'body2';
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
     }
 
     #goTop {
@@ -373,8 +417,8 @@ a:active {
     }
 
     svg.logo {
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
     }
 
     .profilePicture {
@@ -388,11 +432,37 @@ a:active {
     }
 
     .container.text{
-        padding: 32px 64px;
+        padding: 0px 28px 12px 28px;
+    }
+
+    .imageCaption {
+        font-size: 18px;
     }
 }
 
 /* For smaller mobile phones: */
 @media only screen and (max-width: 600px) {
-    
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container.text{
+        padding: 0px 24px 8px 24px;
+    }
+
+    #pageButtons button {
+        font-size: 100%;
+    }
+
+    .imageCaption {
+        font-size: 16px;
+    }
 }
