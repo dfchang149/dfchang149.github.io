@@ -496,6 +496,16 @@ a:active {
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
+    #aboutGridContainer {
+        grid-template-areas:
+        'body1'
+        'image'
+        'body2'
+        'body3';
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     h1 {
         font-size: 48px;
     }
@@ -532,6 +542,16 @@ a:active {
 
 /* For smaller mobile phones: */
 @media only screen and (max-width: 460px) {
+    #aboutGridContainer {
+        grid-template-areas:
+        'body1'
+        'image'
+        'body2'
+        'body3';
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     h1 {
         font-size: 40px;
     }
@@ -556,6 +576,16 @@ a:active {
 
 /* For really small devices: */
 @media only screen and (max-width: 320px) {
+    #aboutGridContainer {
+        grid-template-areas:
+        'body1'
+        'image'
+        'body2'
+        'body3';
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
     h1 {
         font-size: 32px;
     }
