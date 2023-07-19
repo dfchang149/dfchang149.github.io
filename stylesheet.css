@@ -183,7 +183,7 @@ a:active {
     width: 80%;
     padding: 8px 4px 8px 4px;
     
-    transform: translateY(-20%);
+    transform: translateY(-30%);
     visibility: hidden;
     transition: all 0.5s;
     opacity: 0;
@@ -470,6 +470,7 @@ a:active {
         max-height: max-content;
         max-width: 100%;
         outline-offset: 12px;
+        border-radius: 8px;
     }
 
     .container{
@@ -513,6 +514,7 @@ a:active {
 
     .profilePicture {
         outline-offset: 10px;
+        border-radius: 4px;
     }
 
     #pageButtons button {
