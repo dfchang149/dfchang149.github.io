@@ -244,6 +244,9 @@ a:active {
     background: none;
 }
 
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+}
 /* Id's */
 
 #contents {
