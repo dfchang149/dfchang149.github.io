@@ -5,6 +5,13 @@ html {
     min-width: 256px;
 }
 
+::-moz-selection {
+    /* Change highlight background color */
+    background: #2e529b;
+    /* Change highlight text color */
+    color: #ffffff;
+}
+
 ::selection {
     /* Change highlight background color */
     background: #2e529b;
@@ -107,6 +114,10 @@ a:active {
 
 /* Classes */
 
+.highlight::-moz-selection {
+    color: #6aa8ff;
+}
+
 .highlight::selection {
     color: #6aa8ff;
 }
@@ -128,7 +139,8 @@ a:active {
     color: #C2DBFF;
     box-shadow: 0px 4px 24px #10062428;
     padding: 8px 8px;
-    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+            backdrop-filter: blur(0.5em);
     transition: all 0.5s;
     outline: #3f599275 solid 1px;
 }
@@ -139,7 +151,8 @@ a:active {
 
 .container:hover{
     background-color: #0f1d39b2;
-    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+            backdrop-filter: blur(1em);
 }
 
 .profilePicture {
@@ -180,7 +193,8 @@ a:active {
     box-shadow: 0px 4px 8px #10062420;
     border: #7db1ff15 solid 1px;
     border-radius: 8px;
-    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+            backdrop-filter: blur(1em);
     font-size: 14px;
     width: 80%;
     padding: 8px 4px 8px 4px;
@@ -239,7 +253,8 @@ a:active {
 }
 
 .blobsContainer div svg{
-    filter:drop-shadow(0px 4px 24px #10062428);
+    -webkit-filter:drop-shadow(0px 4px 24px #10062428);
+            filter:drop-shadow(0px 4px 24px #10062428);
     position: fixed; /* Until I figure out a fix */
     background: none;
 }
@@ -254,6 +269,8 @@ a:active {
     flex-wrap: wrap;
     margin-bottom: 16px;
     margin-top: -16px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     
     /* If I want to center it
@@ -270,6 +287,8 @@ a:active {
 }
 
 .badge {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     background-color: #0f1d3995;
     border-radius: 32px;
@@ -278,14 +297,16 @@ a:active {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 16px;
-    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+            backdrop-filter: blur(0.5em);
     transition: all 0.5s;
     outline: #3f599275 solid 2px;
     align-items: center;
 
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 12px;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
 }
 
 .badge:hover {
@@ -317,13 +338,16 @@ a:active {
 
 #goTop {
     border-radius: 24px;
-    backdrop-filter: blur(3em);
+    -webkit-backdrop-filter: blur(3em);
+            backdrop-filter: blur(3em);
     box-shadow: 0px 4px 8px #10062420;
     background-color: #3c5c9c79;
     border: #7db1ff15 solid 1px;
     position: fixed;
     font-size: 12px;
     padding: 8px 16px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -341,7 +365,8 @@ a:active {
 
 #pageButtons {
     -webkit-font-smoothing: antialiased;
-    backdrop-filter: blur(3em);
+    -webkit-backdrop-filter: blur(3em);
+            backdrop-filter: blur(3em);
     background-color: #2b478000;
     box-shadow: 0px 4px 12px #10062400;
     border: #7db1ff00 solid 0px;
@@ -349,6 +374,8 @@ a:active {
     padding: 8px;
     z-index: 5;
     position: fixed;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -399,6 +426,8 @@ a:active {
 
 #copyright {
     position: bottom left;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 }
 
@@ -409,9 +438,23 @@ a:active {
 
 .scroll-animation {
     opacity: 1;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-name: fadeInDown;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        transform: translateY(-24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInDown {
@@ -425,6 +468,15 @@ a:active {
     }
 }
 
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -434,12 +486,32 @@ a:active {
     }
 }
 
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fadeOut {
     0% {
         opacity: 1;
     }
     100% {
         opacity: 0;
+    }
+}
+
+@-webkit-keyframes goTopAppear {
+    0% {
+        transform: translateY(-24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -521,6 +593,8 @@ a:active {
     }
 
     .profilePicture {
+        max-height: -webkit-max-content;
+        max-height: -moz-max-content;
         max-height: max-content;
         max-width: 100%;
         outline-offset: 12px;
