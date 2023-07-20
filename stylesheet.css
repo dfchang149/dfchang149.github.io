@@ -247,6 +247,41 @@ a:active {
 .antialiased {
     -webkit-font-smoothing: antialiased;
 }
+
+.badgeContainer {
+    height: 64px;
+    justify-content: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.badge {
+    width: max-content;
+    background-color: #0f1d3995;
+    border-radius: 32px;
+    box-shadow: 0px 4px 24px #10062428;
+    padding: 10px 20px 12px 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    backdrop-filter: blur(0.5em);
+    transition: all 0.5s;
+    outline: #3f599275 solid 2px;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+    float: left;
+}
+
+.badge:hover {
+    padding: 12px 40px 16px 40px;
+    outline-width: 4px;
+    background-color: #0f1d39ce;
+}
+
 /* Id's */
 
 #contents {
@@ -482,10 +517,12 @@ a:active {
 
     .container{
         padding: 16px 16px;
+        position: relative;
     }
 
     .container.text{
         padding: 8px 28px 12px 28px;
+        position: relative;
     }
 
     .imageCaption {
@@ -572,7 +609,7 @@ a:active {
     }
 
     #pageButtons button {
-        font-size: 80%;
+        font-size: 90%;
         padding: 12px 16px;
     }
 }
