@@ -640,6 +640,10 @@ a:active {
         margin-top: -16px;
     }
 
+    .projectImage {
+        height: 200px;
+    }
+
     .badge2 svg {
         height: 10px;
     }
@@ -701,6 +705,10 @@ a:active {
         font-size: 14px;
     }
 
+    .projectImage {
+        height: 200px;
+    }
+
     .badge2 svg {
         height: 10px;
     }
@@ -755,6 +763,10 @@ a:active {
         font-size: 14px;
     }
 
+    .projectImage {
+        height: 140px;
+    }
+
     .badge2 svg {
         height: 10px;
     }
@@ -796,6 +808,10 @@ a:active {
         'body3';
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    .projectImage {
+        height: 120px;
     }
 
     .badge2 svg {
