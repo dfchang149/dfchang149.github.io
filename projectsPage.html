@@ -3,48 +3,108 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css">
         <title> Dustin Chang - Projects </title>
-        <meta name="comment?" content="Welcome">
+        <meta name="description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
+
+        <!-- Icons -->
+        <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets\images\apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicon-16x16.png">
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://dfchang149.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="See Dustin Chang's Projects">
+        <meta property="og:description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
+        <meta property="og:image" content="https://github.com/dfchang149/dfchang149.github.io/blob/main/assets/images/OpenGraphImg.png?raw=true">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="dfchang149.github.io">
+        <meta property="twitter:url" content="https://dfchang149.github.io/">
+        <meta name="twitter:title" content="See Dustin Chang's Projects">
+        <meta name="twitter:description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
+        <meta name="twitter:image" content="https://github.com/dfchang149/dfchang149.github.io/blob/main/assets/images/OpenGraphImg.png?raw=true">
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color: #203765">
-        <div style="z-index: -1;"> 
-            <div class="position-absolute">
-                <div class="blob1"></div>
-            </div>
-            <div class="position-absolute" style="right: 0px; top: 20em;">
-                <svg class="blob" viewBox="-100 0 200 170" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#31508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" />
-                </svg>
-            </div>
-            <div class="position-absolute" style="right: 0px; top: 10;">
-                <svg class="blob" viewBox="130 120 200 200" xmlns="http://www.w3.org/2000/svg">
+    <body class="antialiased" style="background-color: #203765">
+        <div class="blobsContainer">
+            <div style="right: 0px; top: 10;">
+                <svg viewBox="130 120 200 100" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#2B4880" d="M48.4,-45.3C62.8,-34,74.6,-17,76.6,2C78.6,21,70.9,42.1,56.5,56.4C42.1,70.6,21,78.2,6.4,71.7C-8.2,65.3,-16.4,45,-31.1,30.7C-45.7,16.4,-66.8,8.2,-69.8,-3C-72.8,-14.2,-57.7,-28.4,-43,-39.7C-28.4,-51,-14.2,-59.5,1.4,-60.9C17,-62.3,34,-56.7,48.4,-45.3Z" transform="translate(100 100)" />
                     <path fill="#31508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" />
                 </svg>
             </div>
-            <div class="position-absolute" style="right: 0px; top: 0;">
-                <svg class="blob" viewBox="-100 80 200 200" xmlns="http://www.w3.org/2000/svg">
+            <div style="right: 0px; top: 0;">
+                <svg viewBox="-100 80 200 80" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#2B4880" d="M25.6,-14.4C35.6,2.5,47.8,18.6,43.9,34.2C40,49.9,20,65.2,7.2,61C-5.5,56.8,-11.1,33.2,-24.4,12.1C-37.7,-9,-58.8,-27.6,-56.1,-40.3C-53.3,-53.1,-26.7,-60,-9.4,-54.6C7.8,-49.1,15.6,-31.3,25.6,-14.4Z" transform="translate(100 100)" />
                   </svg>
             </div>
-            <div class="position-absolute" style="right: 0px; top: 50%;">
-                <svg class="blob" viewBox="100 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <div style="right: 0px; top: 50%;">
+                <svg id="blob1" viewBox="100 0 200 140" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#2B4880" d="M54.4,-65.2C66.4,-54.8,69.1,-33.7,67,-16.1C64.9,1.4,58.1,15.5,49.3,26.2C40.4,36.9,29.6,44.2,15.7,54C1.7,63.8,-15.2,76.1,-28.2,73.3C-41.3,70.4,-50.3,52.3,-56.8,35.5C-63.3,18.7,-67.2,3.1,-63.7,-10.3C-60.2,-23.6,-49.3,-34.6,-37.4,-45.1C-25.6,-55.5,-12.8,-65.3,4.2,-70.3C21.2,-75.3,42.5,-75.6,54.4,-65.2Z" transform="translate(100 100)" />
                   </svg>
             </div>
-            <div class="position-absolute" style="right: 0px; top: 50%; width: 100%;">
-                <svg class="blob" viewBox="50 -50 200 300" xmlns="http://www.w3.org/2000/svg">
+            <div style="right: 0px; top: 50%; width: 100%;">
+                <svg id="blob2" viewBox="50 -50 200 220" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#31508B" d="M49.9,-56.1C63.9,-47.7,74,-31.3,78.1,-13C82.2,5.2,80.3,25.2,69.4,36.2C58.4,47.1,38.4,48.9,20.5,54.7C2.6,60.4,-13.2,70.2,-30.1,69.7C-47,69.2,-64.9,58.5,-69.8,43.5C-74.7,28.5,-66.5,9.1,-56.8,-3.8C-47.1,-16.7,-36,-23.1,-26.3,-32.3C-16.5,-41.5,-8.3,-53.4,4.8,-59.2C17.9,-65,35.9,-64.6,49.9,-56.1Z" transform="translate(100 100)" />
                   </svg>
             </div>
+            <div style="right: 0px; top: 20em;">
+                <svg id="blob3" viewBox="-100 0 200 170" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#31508B" d="M42.1,-48.5C52.3,-41.7,56.6,-26.2,58.6,-11C60.5,4.3,60.1,19.4,53.8,31.7C47.4,44.1,35.3,53.7,21.5,58.5C7.8,63.2,-7.5,63,-20.8,57.8C-34,52.7,-45.2,42.6,-48.6,30.9C-51.9,19.2,-47.4,5.8,-42.4,-4.8C-37.3,-15.3,-31.6,-23.1,-24.4,-30.4C-17.2,-37.7,-8.6,-44.6,3.7,-49C16,-53.4,32,-55.3,42.1,-48.5Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+        </div>
+        <div>
+            <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
+                <button onclick="window.location.href='index.html';">About</button>
+                <button onclick="window.location.href='resumePage.html';">Resume</button>
+                <button onmousedown="mouseDownCurrPageButton()" onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
+                id="currentPageButton">Projects</button>
+            </div>
+            <div id="goTop">
+                <div class="arrowUp center"></div>
+                    Go back to top
+            </div>
         </div>
         <div id="contents">
-            <div>
+            <div style="position: relative;">
                 <h1 style="margin-top: 164px;">
-                    Work In Progress
+                    My Projects
                 </h1>
-                <h2 style="margin-top: -32px;">
-                    Sorry, this page is not finished yet.
+                <h2>
+                    Apps and programs that I've developed
                 </h2>
+            </div>
+            <div class="flex gap-large animation" style="margin-top: 6em; justify-content: center;">
+                <div class="container text min-width">
+                    <div>
+                        <h3 style="vertical-align: middle;">Fluent Tic Tac Toe
+                            <span class="badge2 lightblu hidden" style="margin-left: 8px; ">
+                                <svg class="lightblue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"><path style="fill:#d49c5c;" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"></path></svg>
+                                25
+                                <script></script>
+                            </span>
+                        </h3>
+                        <p>
+                            A simple Microsoft store app developed using WinUI 3. Made with the design principles of Fluent UI and implemented using C#.
+                        </p>
+                    </div>
+                    <div class="imageWrapper">
+                        <img class="projectImage" src="https://github.com/dfchang149/Fluent-Tic-Tac-Toe/blob/master/Assets/Screenshots/ScreenshotDark.png?raw=true" alt="GitHub Profile Picture">
+                    </div>
+                    <div class="badgeContainer gap-small">
+                        <div class="badge2 lightblue">
+                            C#
+                        </div>
+                        <div class="badge2 lightblue">
+                            WinUI 3
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer center">
@@ -62,5 +122,8 @@
                 </div>
             </div>
         </footer>
+
+        <script src="scrollToTop.js"></script>
+        <script src="scrollAnimation.js"></script>
     </body>
 </html>

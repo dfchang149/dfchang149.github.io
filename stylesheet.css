@@ -264,18 +264,17 @@ a:active {
 }
 
 .badgeContainer {
-    height: 64px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 16px;
     margin-top: -16px;
+    height: max-content;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     
     /* If I want to center it
     justify-content: center;
-    display: flex;
     margin-left: 8px;
     margin-right: 8px;
     */
@@ -315,6 +314,60 @@ a:active {
     background-color: #0f1d39ce;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+}
+
+.gap-large {
+    gap: 32px
+}
+
+.gap-medium {
+    gap: 24px
+}
+
+.gap-small {
+    gap: 12px
+}
+
+.lightblue{
+    color: #87a9ff;
+    fill: #87a9ff;
+}
+
+.badge2 {
+    position: relative;
+    background-color: #273d74;
+    border-radius: 32px;
+    box-shadow: 0px 4px 24px #10062428;
+    padding: 4px 20px 6px 20px;
+    margin-top: 24px;
+    font-size: 80%;
+    transition: all 0.5s;
+    text-align: center;
+    vertical-align: middle;
+    max-height: 16px;
+}
+
+.badge2 svg {
+    height: 14px;
+    margin: auto 2px auto -2px;
+}
+
+.projectImage {
+    height: 240px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    box-shadow: 0px 4px 24px #10062428;
+}
+
+.min-width{
+    width: min-content;
+}
+
 /* Id's */
 
 #contents {
@@ -331,7 +384,7 @@ a:active {
         'body2 image'
         'body3 body3';
     gap: 32px;
-    margin-top: 4em;
+    margin-top: 6em;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -529,7 +582,7 @@ a:active {
 /* Responsive */
 
 /* Laptops/Computers */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     /* 
     h1 {
         font-size: 84px;
@@ -585,6 +638,10 @@ a:active {
 
     #whoAmI {
         margin-top: -16px;
+    }
+
+    .badge2 svg {
+        height: 10px;
     }
 
     svg.logo {
@@ -644,6 +701,10 @@ a:active {
         font-size: 14px;
     }
 
+    .badge2 svg {
+        height: 10px;
+    }
+
     .container.text{
         padding: 4px 24px 8px 24px;
     }
@@ -694,6 +755,10 @@ a:active {
         font-size: 14px;
     }
 
+    .badge2 svg {
+        height: 10px;
+    }
+
     .container.text{
         padding: 2px 18px 4px 22px;
     }
@@ -731,6 +796,10 @@ a:active {
         'body3';
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    .badge2 svg {
+        height: 10px;
     }
 
     .badgeContainer .badge{
