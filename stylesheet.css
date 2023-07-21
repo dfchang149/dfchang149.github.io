@@ -640,10 +640,6 @@ a:active {
         margin-top: -16px;
     }
 
-    .projectImage {
-        height: 200px;
-    }
-
     .badge2 svg {
         height: 10px;
     }
@@ -705,8 +701,13 @@ a:active {
         font-size: 14px;
     }
 
+    .projectCard {
+        width: 75%;
+    }
+
     .projectImage {
-        height: 200px;
+        height: auto;
+        width: 100%;
     }
 
     .badge2 svg {
@@ -763,8 +764,13 @@ a:active {
         font-size: 14px;
     }
 
+    .projectCard {
+        width: 80%;
+    }
+
     .projectImage {
-        height: 140px;
+        height: auto;
+        width: 100%;
     }
 
     .badge2 svg {
@@ -810,8 +816,13 @@ a:active {
         margin-right: 5%;
     }
 
+    .projectCard {
+        width: 80%;
+    }
+
     .projectImage {
-        height: 120px;
+        height: auto;
+        width: 100%;
     }
 
     .badge2 svg {
