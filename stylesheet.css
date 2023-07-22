@@ -1,3 +1,25 @@
+/* Variables */
+:root{
+    --highlight-white: #e9f2ff;
+    --default-white: #C2DBFF;
+    --dull-blue: #88a5ce;
+    --sky-blue: #99c2ff;
+    --daisy-blue: #87a9ff;
+    --light-blue: #7DB1FF;
+    --just-blue: #6aa8ff;
+    --desat-blue: #598fdb;
+    --ocean-blue: #2e529b;
+    --deep-blue: #273d74;
+    --faded-blue: #7db1ff15;
+    --navy-black: #0f1d3995;
+    --navy-black-hover: #0f1d39b2;
+    --dark-blue: #1F2847;
+    --blue-shade: #2b478000;
+    --purple-shade: #10062420;
+    --purple-shade-hidden: #10062400;
+    --faded-blue-hidden: #7db1ff00;
+}
+
 /* Elements */
 
 html {
@@ -7,16 +29,16 @@ html {
 
 ::-moz-selection {
     /* Change highlight background color */
-    background: #2e529b;
+    background: var(--ocean-blue);
     /* Change highlight text color */
-    color: #ffffff;
+    color: white;
 }
 
 ::selection {
     /* Change highlight background color */
-    background: #2e529b;
+    background: var(--ocean-blue);
     /* Change highlight text color */
-    color: #ffffff;
+    color: white;
 }
 
 img {
@@ -29,7 +51,7 @@ button {
 }
 
 svg.logo {
-    fill:#C2DBFF;
+    fill: var(--default-white);
     width: 1.8em;
     height: 1.8em;
     opacity: 0.8;
@@ -40,13 +62,13 @@ svg.logo {
 
 svg.logo:hover {
     opacity: 1;
-    fill:#e9f2ff;
+    fill: var(--highlight-white);
     transform: rotate(10deg) scale(0.95);
     aspect-ratio: 1;
 }
 
 h1 {
-    color: #7DB1FF;
+    color: var(--light-blue);
     font-family: Segoe UI;
     font-weight: normal;
     font-size: 64px;
@@ -54,7 +76,7 @@ h1 {
 }
 
 h2 {
-    color: #C2DBFF;
+    color: var(--default-white);
     font-family: Segoe UI;
     font-weight: 10;
     font-size: 32px;
@@ -62,14 +84,14 @@ h2 {
 }
 
 h3 {
-    color: #6aa8ff;
+    color: var(--just-blue);
     font-family: Segoe UI;
     font-weight: bold;
     font-size: 22px;
 }
 
 h4 {
-    color: #598fdb;
+    color: var(--desat-blue);
     font-family: Segoe UI;
     font-weight: bold;
     font-size: 18px;
@@ -77,11 +99,11 @@ h4 {
 
 p, div {
     font-family: Segoe UI;
-    color: #C2DBFF;
+    color: var(--default-white);
 }
 
 p.light {
-    color: #88a5ce;
+    color: var(--dull-blue);
 }
 
 p {
@@ -94,32 +116,32 @@ a {
 
 /* unvisited link */
 a:link {
-    color: #C2DBFF;
+    color: var(--default-white);
 }
 
 /* visited link */
 a:visited {
-    color: #C2DBFF;
+    color: var(--default-white);
 }
 
 /* mouse over link */
 a:hover {
-    color: #dceaff;
+    color: var(--highlight-white);
 }
 
 /* selected link */
 a:active {
-    color: #C2DBFF;
+    color: var(--default-white);
 }
 
-/* Classes */
+/* Classes (Sorted by date added) */
 
 .highlight::-moz-selection {
-    color: #6aa8ff;
+    color: var(--just-blue);
 }
 
 .highlight::selection {
-    color: #6aa8ff;
+    color: var(--just-blue);
 }
 
 .position-absolute{
@@ -135,9 +157,9 @@ a:active {
 .container{
     position: relative;
     overflow: hidden;
-    background-color: #0f1d3995;
+    background-color: var(--navy-black);
     border-radius: 24px;
-    color: #C2DBFF;
+    color: var(--default-white);
     box-shadow: 0px 4px 24px #10062428;
     padding: 8px 8px;
     -webkit-backdrop-filter: blur(0.5em);
@@ -151,7 +173,7 @@ a:active {
 }
 
 .container:hover{
-    background-color: #0f1d39b2;
+    background-color: var(--navy-black-hover);
     -webkit-backdrop-filter: blur(1em);
             backdrop-filter: blur(1em);
 }
@@ -191,8 +213,8 @@ a:active {
     top: auto;
     bottom: 10%;
     background-color: #3c5c9c6d;
-    box-shadow: 0px 4px 8px #10062420;
-    border: #7db1ff15 solid 1px;
+    box-shadow: 0px 4px 8px var(--purple-shade);
+    border: var(--faded-blue) solid 1px;
     border-radius: 8px;
     -webkit-backdrop-filter: blur(1em);
             backdrop-filter: blur(1em);
@@ -212,7 +234,7 @@ a:active {
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid #C2DBFF;
+    border-bottom: 5px solid var(--default-white);
     opacity: 0.8;
 }
 
@@ -223,8 +245,12 @@ a:active {
     right: 0;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .highlight {
-    color: #dceaff;
+    color: var(--default-white);
 }
 
 .footer {
@@ -281,22 +307,14 @@ a:active {
     */
 }
 
-.badgeContainer .badge {
-    margin-left: 0;
-    margin-right: 24px;
-}
-
 .badge {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #0f1d3995;
+    background-color: var(--navy-black);
     border-radius: 32px;
     box-shadow: 0px 4px 24px #10062428;
     padding: 10px 20px 12px 20px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 16px;
     -webkit-backdrop-filter: blur(0.5em);
             backdrop-filter: blur(0.5em);
     transition: all 0.5s;
@@ -309,16 +327,38 @@ a:active {
          column-gap: 12px;
 }
 
+.badge.no-image {
+    display: block;
+    grid-template-columns: none;
+}
+
 .badge:hover {
     padding: 10px 40px 12px 40px;
     outline-width: 4px;
-    background-color: #0f1d39ce;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
+}
+
+.margin-top-large {
+    margin-top: 24px;
+}
+
+.margin-top-medium {
+    margin-top: 16px;
+}
+
+.margin-top-small {
+    margin-top: 4px;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 16px;
 }
 
 .gap-large {
@@ -329,22 +369,21 @@ a:active {
     gap: 24px
 }
 
+.gap-medium-small {
+    gap: 18px
+}
+
 .gap-small {
     gap: 12px
 }
 
-.lightblue{
-    color: #87a9ff;
-    fill: #87a9ff;
-}
-
 .badge2 {
     position: relative;
-    background-color: #273d74;
+    color: var(--daisy-blue);
+    background-color: var(--deep-blue);
     border-radius: 32px;
-    box-shadow: 0px 4px 24px #10062428;
+    box-shadow: 0px 4px 24px var(--purple-shade);
     padding: 4px 20px 6px 20px;
-    margin-top: 24px;
     font-size: 80%;
     transition: all 0.5s;
     text-align: center;
@@ -357,12 +396,23 @@ a:active {
     margin: auto 2px auto -2px;
 }
 
+.projectCard {
+    transition: all 0.5s;
+}
+
+.projectCard:hover {
+    transform: translateY(-1%);
+}
+
 .projectImage {
     height: 240px;
     border-radius: 16px;
-    margin-bottom: 16px;
-    margin-top: 8px;
     box-shadow: 0px 4px 24px #10062428;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.projectImage:hover{
+    transform: scale(0.975);
 }
 
 .quick-trans {
@@ -370,6 +420,8 @@ a:active {
 }
 
 .min-width{
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
 }
 
@@ -398,9 +450,9 @@ a:active {
     border-radius: 24px;
     -webkit-backdrop-filter: blur(3em);
             backdrop-filter: blur(3em);
-    box-shadow: 0px 4px 8px #10062420;
+    box-shadow: 0px 4px 8px var(--purple-shade);
     background-color: #3c5c9c79;
-    border: #7db1ff15 solid 1px;
+    border: var(--faded-blue) solid 1px;
     position: fixed;
     font-size: 12px;
     padding: 8px 16px;
@@ -425,9 +477,9 @@ a:active {
     -webkit-font-smoothing: antialiased;
     -webkit-backdrop-filter: blur(3em);
             backdrop-filter: blur(3em);
-    background-color: #2b478000;
-    box-shadow: 0px 4px 12px #10062400;
-    border: #7db1ff00 solid 0px;
+    background-color: var(--blue-shade);
+    box-shadow: 0px 4px 12px var(--purple-shade-hidden);
+    border: var(--faded-blue-hidden) solid 0px;
     border-radius: 36px;
     padding: 8px;
     z-index: 5;
@@ -454,13 +506,13 @@ a:active {
     border-radius: 32px;
     font-size: 110%;
     min-height: 2em;
-    color: #99c2ff;
+    color: var(--sky-blue);
     transition: all 0.25s;
 }
   
 #pageButtons button:hover {
     transform: scale(1.05);
-    color: #C2DBFF;
+    color: var(--default-white);
 }
 
 #pageButtons button:active {
@@ -468,9 +520,9 @@ a:active {
 }
 
 #pageButtons #currentPageButton {
-    background: #1F2847;
-    box-shadow: 0px 4px 12px #10062400;
-    color: #C2DBFF;
+    background: var(--dark-blue);
+    box-shadow: 0px 4px 12px var(--purple-shade-hidden);
+    color: var(--default-white);
 }
 
 #whoAmI {
@@ -478,8 +530,7 @@ a:active {
 }
 
 #currentPageButton:hover {
-    box-shadow: 0px 4px 8px #10062428;
-    color: #e9f2ff;
+    color: var(--highlight-white);
 }
 
 #copyright {
@@ -584,7 +635,7 @@ a:active {
     }
 }
 
-/* Responsive */
+/* Responsiveness (Pretty messy. I will improve this when I get better at css) */
 
 /* Laptops/Computers */
 @media only screen and (max-width: 1200px) {
@@ -788,8 +839,11 @@ a:active {
         padding: 2px 18px 4px 22px;
     }
 
+    .gap-medium {
+        gap: 16px;
+    }
+
     .badgeContainer .badge{
-        margin-top: 16px;
         margin-left: auto;
         margin-right: auto;
         font-size: 14px;
@@ -802,6 +856,7 @@ a:active {
     }
 
     .badge:hover {
+        transform: translateY(-4px);
         padding: 10px 22px 12px 22px;
     }
 
@@ -836,8 +891,11 @@ a:active {
         height: 10px;
     }
 
+    .gap-medium {
+        gap: 16px;
+    }
+
     .badgeContainer .badge{
-        margin-top: 16px;
         margin-left: auto;
         margin-right: auto;
         font-size: 12px;
@@ -850,6 +908,7 @@ a:active {
     }
 
     .badge:hover {
+        transform: translateY(-4px);
         padding: 10px 20px 12px 20px;
     }
     
