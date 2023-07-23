@@ -465,6 +465,14 @@ a:active {
     border-radius: 24px;
 }
 
+.starDisplay svg{
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.starDisplay:hover svg{
+    transform: rotate(15deg) scale(1.2);
+}
+
 
 /* Id's */
 
