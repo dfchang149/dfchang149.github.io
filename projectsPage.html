@@ -74,23 +74,21 @@
             </div>
         </div>
         <div id="contents">
-            <div style="position: relative;">
-                <h1 style="margin-top: 164px;">
+            <div class="header">
+                <h1>
                     My Projects
                 </h1>
                 <h2>
-                    Apps and programs that I've developed
+                    Apps and programs that I've worked on
                 </h2>
             </div>
-            <div class="flex gap-large animation" style="margin-top: 6em; justify-content: center;">
+            <div class="flex gap-large center justify-center animation">
                 <div href="fluentTicTacToe.html" class="container text min-width projectCard">
-                    <div style="position: relative;">
+                    <div class="relative">
                         <h3 style="vertical-align: middle;"> Fluent Tic Tac Toe
-                            <!-- I'll do this once I figure out how to fetch github repo stars
-                            -->
                             <span class="badge2" style="margin-left: 8px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"><path style="fill:#d49c5c;" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"></path></svg>
-                                <a class="starDisplay" data-repo="Fluent-Tic-Tac-Toe">
+                                <a style="transition-duration: 1s;" class="starDisplay" data-repo="Fluent-Tic-Tac-Toe">
                                     999
                                 </a>
                             </span>
@@ -102,13 +100,16 @@
                             <a href="https://www.microsoft.com/en-us/p/fluent-tictactoe/9NPFG5ZPGXZR?" class="badge no-image center-text">
                                 Download
                             </a>
-                            <a href="fluentTicTacToe.html" class="badge no-image center-text">
+                            <a href="https://github.com/dfchang149/Fluent-Tic-Tac-Toe" class="badge no-image center-text">
                                 Learn More
                             </a>
                         </div>
                     </div>
-                    <div class="imageWrapper  margin-top-small">
+                    <div class="imageWrapper margin-top-small">
                         <img class="projectImage" src="https://github.com/dfchang149/Fluent-Tic-Tac-Toe/blob/master/Assets/Screenshots/ScreenshotDark.png?raw=true" alt="GitHub Profile Picture">
+                        <div class="imageCaption horizontal-center">
+                            App screenshot with dark mode
+                        </div>
                     </div>
                     <div class="badgeContainer gap-small margin-top-medium">
                         <div class="badge2">
@@ -121,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer center">
+        <footer class="footer horizontal-center">
             <div class="footerCol">
                 <p id="copyright">© <span><script>document.write(new Date().getFullYear() );</script></span> Dustin Chang</p>                 
             </div>

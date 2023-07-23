@@ -69,27 +69,19 @@
                 <button onclick="window.location.href='projectsPage.html';">Projects</button>
             </div>
             <div id="goTop">
-                <div class="arrowUp center"></div>
+                <div class="arrowUp horizontal-center"></div>
                     Go back to top
             </div>
         </div>
         <div id="contents">
-            <div style="position: relative;">
-                <h1 style="margin-top: 164px;">
+            <div class="header">
+                <h1>
                     Hi, I'm Dustin Chang
                 </h1>
                 <h2 id="whoAmI" data-period="2000" data-type='["A computer science student from UCSD","An avid gamer","A future game developer","A storyteller","A web designer"]'>
                     A Computer Science student from UCSD
                 </h2>
             </div>
-            <!-- Not sure if I should remove but it is redundant
-            <div style="text-align: center; margin-top: 3em;">
-                <a href="https://github.com/dfchang149" title="My GitHub">
-                    <svg class="logo" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                </a>
-            </div>
-            -->
             <div id="aboutGridContainer">
                 <div class="container text animation" style="grid-area: body1;">
                     <h3>
@@ -113,10 +105,10 @@
                         When I'm not creating or programming, I like to revisit my past and experience what the newer generation of games Roblox has to offer, with the hopes of one day creating something as <span class="highlight">successful and entertaining</span>, whether its on-platform or off.
                     </p>
                 </div>
-                <div class="container animation" style="grid-area: image; --animation-order: 2; aspect-ratio: 1;">
-                    <div class="imageWrapper">
+                <div class="container animation vertical-center" style="grid-area: image; --animation-order: 2; aspect-ratio: 1;">
+                    <div class="imageWrapper horizontal-center" style="width: calc(100% - 32px); height: calc(100% - 32px); margin-top: auto; margin-bottom: auto;">
                         <img class="profilePicture" src="https://avatars.githubusercontent.com/u/103155912?" alt="GitHub Profile Picture">
-                        <div class="imageCaption center">
+                        <div class="imageCaption horizontal-center">
                             My GitHub Profile Picture
                         </div>
                     </div>
@@ -141,25 +133,8 @@
                     </div>
                 </div>
             </div>
-            <!--
-            <div style="position: relative;">
-                <h1 style="margin-top: 128px; margin-bottom: 48px;">
-                    Where to Find Me
-                </h1>
-                <div class="badgeContainer">
-                    <a class="badge" href="https://apps.microsoft.com/store/search?publisher=Dustin%20Chang" title="My Microsoft Apps">
-                        <svg class="logo" style="margin-bottom: 4px;" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3.75V6H2.75C2.33579 6 2 6.33579 2 6.75V18.25C2 19.7688 3.23122 21 4.75 21H19.25C20.7688 21 22 19.7688 22 18.25V6.75C22 6.33579 21.6642 6 21.25 6H16V3.75C16 2.7835 15.2165 2 14.25 2H9.75C8.7835 2 8 2.7835 8 3.75ZM9.75 3.5H14.25C14.3881 3.5 14.5 3.61193 14.5 3.75V6H9.5V3.75C9.5 3.61193 9.61193 3.5 9.75 3.5ZM8 13V9.5H11.5V13H8ZM8 17.5V14H11.5V17.5H8ZM16 13H12.5V9.5H16V13ZM12.5 17.5V14H16V17.5H12.5Z"></path> </svg>
-                        Microsoft Store
-                    </a>
-                    <a class="badge" href="https://github.com/dfchang149" title="@dfchang149">
-                        <svg class="logo" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path> </svg>
-                        GitHub
-                    </a>
-                </div>
-            </div>
-            -->
         </div>
-        <footer class="footer center">
+        <footer class="footer horizontal-center">
             <div class="footerCol">
                 <p id="copyright">© <span><script>document.write( new Date().getFullYear() );</script></span> Dustin Chang</p>                 
             </div>

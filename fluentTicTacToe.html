@@ -58,17 +58,47 @@
                 </svg>
             </div>
         </div>
+        <div>
+            <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
+                <button onclick="window.location.href='index.html';">About</button>
+                <button onclick="window.location.href='resumePage.html';">Resume</button>
+                <button onmousedown="mouseDownCurrPageButton()" onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
+                id="currentPageButton">Projects</button>
+            </div>
+            <div id="goTop">
+                <div class="arrowUp horizontal-center"></div>
+                    Go back to top
+            </div>
+        </div>
         <div id="contents">
-            <div style="position: relative;">
-                <h1 style="margin-top: 164px;">
+            <div class="header">
+                <h1>
                     Fluent Tic Tac Toe
                 </h1>
                 <h2>
                     A simple game redesigned with Fluent UI
                 </h2>
             </div>
+            <div class="relative" style="width: fit-content;">
+                <div class="imageWrapper margin-top-small" style="width: fit-content;">
+                    <img width="90%" style="border-radius: 24px; max-width: 960px;" src="https://github.com/dfchang149/Fluent-Tic-Tac-Toe/blob/master/Assets/Screenshots/ScreenshotDark.png?raw=true" alt="GitHub Profile Picture">
+                    <div class="imageCaption horizontal-center">
+                        Dark mode support
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
+                <p>
+                    A screenshot of the app with dark mode enabled.
+                </p>
+            </div>
+            
+            <div class="container text animation">
+                
+            </div>
         </div>
-        <footer class="footer center">
+        <footer class="footer horizontal-center">
             <div class="footerCol">
                 <p id="copyright">© <span><script>document.write( new Date().getFullYear() );</script></span> Dustin Chang</p>                 
             </div>

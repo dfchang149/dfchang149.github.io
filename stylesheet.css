@@ -180,10 +180,9 @@ a:active {
 
 .profilePicture {
     position: relative;
-    border-radius: 16px;
+    border-radius: 8px;
     outline: #7592C9 solid 2px;
     outline-offset: 8px;
-    scale: 0.9;
     width: 100%;
     
     max-height: 384px;
@@ -210,8 +209,9 @@ a:active {
 
 .imageCaption {
     position: absolute;
-    top: auto;
-    bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 12px;
     background-color: #3c5c9c6d;
     box-shadow: 0px 4px 8px var(--purple-shade);
     border: var(--faded-blue) solid 1px;
@@ -219,7 +219,7 @@ a:active {
     -webkit-backdrop-filter: blur(1em);
             backdrop-filter: blur(1em);
     font-size: 14px;
-    width: 80%;
+    width: calc(100% - 36px);
     padding: 8px 4px 8px 4px;
     
     transform: translateY(-30%);
@@ -238,15 +238,25 @@ a:active {
     opacity: 0.8;
 }
 
-.center {
+.horizontal-center {
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .center-text {
     text-align: center;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .highlight {
@@ -403,15 +413,18 @@ a:active {
     transform: translateY(-1%);
 }
 
+.projectCard .imageWrapper {
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.projectCard .imageWrapper:hover {
+    transform: scale(0.975);
+}
+
 .projectImage {
     height: 240px;
     border-radius: 16px;
     box-shadow: 0px 4px 24px #10062428;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-}
-
-.projectImage:hover{
-    transform: scale(0.975);
 }
 
 .quick-trans {
@@ -422,6 +435,20 @@ a:active {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 6em;
+    margin-top: 164px;
+}
+
+.header h2 {
+    margin-top: -32px;
+}
+
+.relative {
+    position: relative;
 }
 
 /* Id's */
@@ -440,7 +467,6 @@ a:active {
         'body2 image'
         'body3 body3';
     gap: 32px;
-    margin-top: 6em;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -522,10 +548,6 @@ a:active {
     background: var(--dark-blue);
     box-shadow: 0px 4px 12px var(--purple-shade-hidden);
     color: var(--default-white);
-}
-
-#whoAmI {
-    margin-top: -32px;
 }
 
 #currentPageButton:hover {
@@ -691,8 +713,19 @@ a:active {
         font-size: 16px;
     }
 
-    #whoAmI {
+    .header h2 {
         margin-top: -16px;
+    }
+
+    .projectCard {
+        width: 75%;
+        min-width: 50vw;
+        position: relative;
+    }
+
+    .projectImage {
+        height: auto;
+        width: 100%;
     }
 
     .badge2 svg {
@@ -757,7 +790,7 @@ a:active {
     }
 
     .projectCard {
-        width: 75%;
+        width: 80%;
         min-width: 50vw;
         position: relative;
     }
@@ -792,7 +825,7 @@ a:active {
         font-size: 100%;
     }
 
-    #whoAmI {
+    .header h2 {
         margin-top: -8px;
     }
 }
