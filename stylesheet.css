@@ -29,6 +29,7 @@ html {
 
 *{
     font-family: 'Segoe UI', Arial;
+    font-size: 16px;
 }
 
 ::-moz-selection {
@@ -364,6 +365,10 @@ a:active {
     margin-bottom: 16px;
 }
 
+.margin-bottom-medium-small {
+    margin-bottom: 8px;
+}
+
 .gap-large {
     gap: 32px
 }
@@ -428,6 +433,10 @@ a:active {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
+}
+
+.full-width {
+    width: 100%;
 }
 
 .content-width {
@@ -552,7 +561,7 @@ a:active {
     margin-right: 2px;
     margin-left: 2px;
     border-radius: 32px;
-    font-size: 110%;
+    font-size: 18px;
     min-height: 2em;
     color: var(--sky-blue);
     transition: all 0.25s;
