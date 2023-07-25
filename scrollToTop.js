@@ -21,7 +21,6 @@ function mouseDownCurrPageButton() {
 function mouseOverCurrPageButton() {
     if(body.scrollTop != 0 || docElement.scrollTop != 0) {
         goTopLabel.style.opacity = 1;
-        goTopLabel.style.scale = 1;
         goTopLabel.style.transitionDelay = "0.5s";
         goTopLabel.style.padding = "8px 16px";
         goTopLabel.style.transform = "scale(1) translateY(0%)";
@@ -32,7 +31,7 @@ function mouseLeaveCurrPageButton(bypass) {
     if(goTopLabel.style.opacity > 0 || bypass == true) {
         goTopLabel.style.opacity = 0;
         goTopLabel.style.padding = "8px 16px";
-        goTopLabel.style.transform = "scale(0.8) translateY(-30%)";    
+        goTopLabel.style.transform = "scale(0.8) translateY(-30%)"; 
     }
 }
 

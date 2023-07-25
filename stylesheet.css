@@ -496,6 +496,14 @@ a:active {
     transform: rotate(15deg) scale(1.2);
 }
 
+.experienceContainer {
+    max-width: 600px;
+}
+
+.skillsContainer {
+    max-width: 360px;
+}
+
 
 /* Id's */
 
@@ -644,64 +652,6 @@ a:active {
     }
 }
 
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes goTopAppear {
-    0% {
-        transform: translateY(-24px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes goTopAppear {
-    0% {
-        transform: translateY(-24px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Responsiveness (Pretty messy. I will improve this when I get better at css) */
 
 /* Laptops/Computers */
@@ -724,6 +674,15 @@ a:active {
         line-height: 24px;
     }
     */
+    
+
+    .experienceContainer {
+        max-width: calc(100% - 16px);
+    }
+
+    .skillsContainer {
+        max-width: calc(100% - 16px);
+    }
 }
 
 /* For mobile devices: */
@@ -809,6 +768,14 @@ a:active {
     .footer {
         padding: 32px 10% 32px 10%;
     }
+
+    .experienceContainer {
+        max-width: calc(100% - 16px);
+    }
+
+    .skillsContainer {
+        max-width: calc(100% - 16px);
+    }
 }
 
 /* For mobile phones: */
@@ -873,6 +840,14 @@ a:active {
 
     .header h2 {
         margin-top: -8px;
+    }
+    
+    .experienceContainer {
+        max-width: calc(100% - 16px);
+    }
+
+    .skillsContainer {
+        max-width: calc(100% - 16px);
     }
 }
 
@@ -942,6 +917,14 @@ a:active {
         font-size: 90%;
         padding: 12px 16px;
     }
+    
+    .experienceContainer {
+        max-width: calc(100% - 16px);
+    }
+
+    .skillsContainer {
+        max-width: calc(100% - 16px);
+    }
 }
 
 /* For really small devices: */
@@ -1005,5 +988,13 @@ a:active {
     #pageButtons button {
         font-size: 70%;
         padding: 8px 10px;
+    }
+    
+    .experienceContainer {
+        max-width: calc(100% - 16px);
+    }
+
+    .skillsContainer {
+        max-width: calc(100% - 16px);
     }
 }
