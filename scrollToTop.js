@@ -12,7 +12,7 @@ window.onscroll = function() {scrollFunction()};
 
 function mouseDownCurrPageButton() {
     if(goTopLabel.style.opacity > 0) {
-        goTopLabel.style.transitionDelay = "0s";
+        goTopLabel.style.transition = "visibility 0s ease-in-out 0.5s, opacity 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s";
         goTopLabel.style.padding = "6px 20px";
         goTopLabel.style.transform = "scale(1) translateY(8px)";
     }
@@ -20,6 +20,7 @@ function mouseDownCurrPageButton() {
 
 function mouseOverCurrPageButton() {
     if(body.scrollTop != 0 || docElement.scrollTop != 0) {
+        goTopLabel.style.visibility = "visible";
         goTopLabel.style.opacity = 1;
         goTopLabel.style.transitionDelay = "0.5s";
         goTopLabel.style.padding = "8px 16px";
@@ -29,9 +30,17 @@ function mouseOverCurrPageButton() {
 
 function mouseLeaveCurrPageButton(bypass) {
     if(goTopLabel.style.opacity > 0 || bypass == true) {
+        goTopLabel.style.transition = "visibility 0s ease-in-out 1s, opacity 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s, padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s";
+        goTopDisappear(bypass);
+    }
+}
+
+function goTopDisappear(bypass) {
+    if(goTopLabel.style.opacity > 0 || bypass == true) {
         goTopLabel.style.opacity = 0;
         goTopLabel.style.padding = "8px 16px";
         goTopLabel.style.transform = "scale(0.8) translateY(-30%)"; 
+        goTopLabel.style.visibility = "hidden";
     }
 }
 
@@ -59,7 +68,7 @@ function scrollFunction() {
         pageButtons.style.boxShadow = "0px 4px 8px #10062420";
         pageButtons.style.border = "#7db1ff15 solid 1px";
     } else {
-        goTopLabel.style.transitionDelay = "0s";
+        goTopLabel.style.transition = "visibility 0s ease-in-out 1s, opacity 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s";
         mouseLeaveCurrPageButton();
 
         if (isOverPageButtons) {
@@ -74,13 +83,12 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    goTopLabel.style.transitionDelay = "0s";
-    mouseLeaveCurrPageButton();
+    goTopDisappear();
     body.scrollTop = 0; // For Safari
     docElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-goTopLabel.style.transitionDelay = "0s";
+goTopLabel.style.transition = "visibility 0s ease-in-out 1s, opacity 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s";
 mouseLeaveCurrPageButton(true);
 
 scrollFunction();
