@@ -1,34 +1,32 @@
-@media (prefers-color-scheme: light) {
-    /* Light theme styles go here */
-    :root{
-        --highlight-white: #000000;
-        --default-white: #0e1f35;
-        --dull-blue: #3b485f;
-        --sky-blue: #334561;
-        --daisy-blue: #e5ebfc;
-        --light-blue: #2c4a78;
-        --just-blue: #1f3f6b;
-        --desat-blue: #598fdb;
-        --ocean-blue: #2e529b;
-        --deep-blue: #5b7dd2;
-        --background-blue: #9ebfff;
-        --faded-blue: #7db1ff15;
-        --navy-black: #bed6ffa9;
-        --navy-black-hover: #eaf1ffaa;
-        --dark-blue: #cfddff;
-        --footer-blue: #c1d4ff;
-        --blue-shade: #2b478000;
-        --purple-shade: #10062420;
-        --purple-shade-hidden: #10062400;
-        --faded-blue-hidden: #7db1ff00;
-        
-        --blob-blue1: #7aa1e9;
-        --blob-blue2: #6a93e3;
+:root{
+    --highlight-white: #000000;
+    --default-white: #010812;
+    --dull-blue: #4a5b77;
+    --sky-blue: #334561;
+    --daisy-blue: #e5ebfc;
+    --light-blue: #2c4a78;
+    --highlight-blue: #ffffff;
+    --just-blue: #23497e;
+    --desat-blue: #598fdb;
+    --ocean-blue: #2e529b;
+    --deep-blue: #5b7dd2;
+    --background-blue: #9ebfff;
+    --faded-blue: #7db1ff15;
+    --navy-black: #bed6ffa9;
+    --navy-black-hover: #eaf1ffaa;
+    --dark-blue: #cfddff;
+    --footer-blue: #c1d4ff;
+    --blue-shade: #2b478000;
+    --purple-shade: #10062420;
+    --purple-shade-hidden: #10062400;
+    --faded-blue-hidden: #7db1ff00;
+    
+    --blob-blue1: #7aa1e9;
+    --blob-blue2: #6a93e3;
 
-        --bar: #ffffffbf;
-        --bar-hover: #ebf2ff56;
-        --bar-hidden: #3c5c9c00;
-        
-        --star-yellow: #ffd025;
-    }
+    --bar: #ffffffbf;
+    --bar-hover: #ebf2ff56;
+    --bar-hidden: #3c5c9c00;
+    
+    --star-yellow: #ffd025;
 }

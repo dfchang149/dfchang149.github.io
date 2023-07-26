@@ -116,11 +116,11 @@ a:active {
 /* Classes (Sorted by date added) */
 
 .highlight::-moz-selection {
-    color: var(--just-blue);
+    color: var(--highlight-blue);
 }
 
 .highlight::selection {
-    color: var(--just-blue);
+    color: var(--highlight-blue);
 }
 
 .position-absolute{
@@ -738,7 +738,7 @@ a:active {
         font-size: 18px;
     }
 
-    p {
+    * {
         font-size: 14px;
     }
 
@@ -827,7 +827,7 @@ a:active {
         font-size: 24px;
     }
 
-    p {
+    * {
         font-size: 14px;
     }
 
@@ -900,7 +900,7 @@ a:active {
         font-size: 22px;
     }
 
-    p {
+    * {
         font-size: 14px;
     }
 
@@ -1010,7 +1010,8 @@ a:active {
         font-size: 18px;
     }
 
-    p {
+
+    * {
         font-size: 12px;
     }
 
