@@ -677,11 +677,11 @@ a:active {
     
 
     .experienceContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 
     .skillsContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
 
@@ -770,11 +770,11 @@ a:active {
     }
 
     .experienceContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 
     .skillsContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
 
@@ -843,11 +843,11 @@ a:active {
     }
     
     .experienceContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 
     .skillsContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
 
@@ -919,11 +919,11 @@ a:active {
     }
     
     .experienceContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 
     .skillsContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
 
@@ -991,10 +991,10 @@ a:active {
     }
     
     .experienceContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 
     .skillsContainer {
-        max-width: calc(100% - 16px);
+        max-width: 100%;
     }
 }
