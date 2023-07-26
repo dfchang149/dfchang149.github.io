@@ -46,7 +46,7 @@ function goTopDisappear(bypass) {
 
 function mouseOverPageButtons() {
     if(body.scrollTop <= scrollBound && docElement.scrollTop <= scrollBound){
-        pageButtons.style.backgroundColor = "#3c5c9c3d";
+        pageButtons.style.backgroundColor = "var(--bar-hover)";
         pageButtons.style.border = "#7db1ff08 solid 1px";
     }
     isOverPageButtons = true;
@@ -55,7 +55,7 @@ function mouseOverPageButtons() {
 
 function mouseLeavePageButtons() {
     if(body.scrollTop <= scrollBound && docElement.scrollTop <= scrollBound){
-        pageButtons.style.backgroundColor = "#3c5c9c00";
+        pageButtons.style.backgroundColor = "var(--bar-hidden)";
         pageButtons.style.border = "#7db1ff00 solid 0px";
     }
     isOverPageButtons = false;
@@ -64,8 +64,8 @@ function mouseLeavePageButtons() {
 
 function scrollFunction() {
     if (body.scrollTop > scrollBound || docElement.scrollTop > scrollBound) {
-        pageButtons.style.backgroundColor = "#3c5c9c6d";
-        pageButtons.style.boxShadow = "0px 4px 8px #10062420";
+        pageButtons.style.backgroundColor = "var(--bar)";
+        pageButtons.style.boxShadow = "0px 4px 8px var(--purple-shade)";
         pageButtons.style.border = "#7db1ff15 solid 1px";
     } else {
         goTopLabel.style.transition = "visibility 0s ease-in-out 1s, opacity 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s";
@@ -74,10 +74,10 @@ function scrollFunction() {
         if (isOverPageButtons) {
             mouseOverPageButtons();
         } else {
-            pageButtons.style.backgroundColor = "#3c5c9c00";
+            pageButtons.style.backgroundColor = "var(--bar-hidden)";
             pageButtons.style.border = "#7db1ff00 solid 0px";
         }
-        pageButtons.style.boxShadow = "0px 4px 12px #10062400";
+        pageButtons.style.boxShadow = "0px 4px 12px var(--purple-shade-hidden)";
     }
 }
 
