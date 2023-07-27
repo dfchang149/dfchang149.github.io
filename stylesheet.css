@@ -613,7 +613,8 @@ a:active {
     aspect-ratio: 1;
     max-height: 56px;
     z-index: 5;
-    border-radius: 36px;background: var(--dark-blue);
+    border-radius: 36px;
+    background: var(--dark-blue);
     backdrop-filter: blur(3em);
     box-shadow: 0px 2px 4px var(--purple-shade);
     transition: all 0.25s;

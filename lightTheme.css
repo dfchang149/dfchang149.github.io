@@ -34,3 +34,11 @@
 #themeButton svg {
     fill: var(--ocean-blue);
 }
+
+#lightThemeIcon {
+    display: block;
+}
+
+#darkThemeIcon {
+    display: none;
+}
