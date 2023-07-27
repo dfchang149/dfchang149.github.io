@@ -1,0 +1,85 @@
+@media (prefers-color-scheme: dark) {
+    :root{
+        --highlight-white: #e9f2ff;
+        --default-white: #C2DBFF;
+        --dull-blue: #88a5ce;
+        --sky-blue: #99c2ff;
+        --daisy-blue: #87a9ff;
+        --light-blue: #7DB1FF;
+        --highlight-blue: #8fbeff;
+        --just-blue: #6aa8ff;
+        --desat-blue: #598fdb;
+        --ocean-blue: #2e529b;
+        --deep-blue: #273d74;
+        --background-blue: #203765;
+        --faded-blue: #7db1ff15;
+        --navy-black: #0f1d3995;
+        --navy-black-hover: #0f1d39b2;
+        --dark-blue: #1F2847;
+        --footer-blue: #172b56;
+        --blue-shade: #2b478000;
+        --purple-shade: #10062420;
+        --purple-shade-hidden: #10062400;
+        --faded-blue-hidden: #7db1ff00;
+    
+        --blob-blue1: #31508B;
+        --blob-blue2: #2B4880;
+    
+        --bar: #3c5c9c6d;
+        --bar-hover: #3c5c9c3d;
+        --bar-hidden: #3c5c9c00;
+    
+        --star-yellow: #d49c5c;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --highlight-white: #000000;
+        --default-white: #001129;
+        --dull-blue: #4a5b77;
+        --sky-blue: #334561;
+        --daisy-blue: #e5ebfc;
+        --light-blue: #2c4a78;
+        --highlight-blue: #ffffff;
+        --just-blue: #23497e;
+        --desat-blue: #598fdb;
+        --ocean-blue: #2e529b;
+        --deep-blue: #5b7dd2;
+        --background-blue: #9ebfff;
+        --faded-blue: #7db1ff15;
+        --navy-black: #d1e2ffc4;
+        --navy-black-hover: #eaf1ffaa;
+        --dark-blue: #cfddff;
+        --footer-blue: #c1d4ff;
+        --blue-shade: #2b478000;
+        --purple-shade: #0a062413;
+        --purple-shade-hidden: #0a062400;
+        --faded-blue-hidden: #7db1ff00;
+        
+        --blob-blue1: #7aa1e9;
+        --blob-blue2: #6a93e3;
+    
+        --bar: #ffffffbf;
+        --bar-hover: #ebf2ff56;
+        --bar-hidden: #3c5c9c00;
+        
+        --star-yellow: #ffd025;
+    }
+    
+    #themeButton svg {
+        fill: var(--ocean-blue);
+    }
+}
+
+#lightThemeIcon {
+    display: none;
+}
+
+#darkThemeIcon {
+    display: none;
+}
+
+#systemThemeIcon {
+    display: block;
+}
