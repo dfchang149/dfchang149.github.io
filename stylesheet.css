@@ -300,7 +300,7 @@ a:active {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: var(--navy-black);
+    background-color: var(--navy-black-hover);
     border-radius: 32px;
     box-shadow: 0px 4px 24px #10062428;
     padding: 10px 20px 12px 20px;
@@ -611,10 +611,9 @@ a:active {
     left: 16px;
     height: 10%;
     aspect-ratio: 1;
-    max-height: 48px;
+    max-height: 56px;
     z-index: 5;
-    border-radius: 36px;
-    background-color: var(--navy-black);
+    border-radius: 36px;background: var(--dark-blue);
     backdrop-filter: blur(3em);
     box-shadow: 0px 2px 4px var(--purple-shade);
     transition: all 0.25s;
