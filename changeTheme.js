@@ -1,14 +1,23 @@
+const themeLink = document.querySelector("#themeLink");
+const currentTheme = localStorage.getItem("theme");
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-const theme = document.querySelector("#themeLink");
+if (currentTheme == null) {
+    themeLink.href = "darkTheme.css";
+} else {
+    themeLink.href = currentTheme+"Theme.css";
+}
+
+function swapTheme() {
+    if (themeLink.getAttribute("href") == "lightTheme.css") {
+        themeLink.href = "darkTheme.css";
+        localStorage.setItem("theme","dark");
+    } else {
+        themeLink.href = "lightTheme.css";
+        localStorage.setItem("theme","light");
+    }
+}
 
 function themeButtonPressed() {
-    // If the current URL contains "light-theme.css"
-    if (theme.getAttribute("href") == "lightTheme.css") {
-    // ... then switch it to "dark-theme.css"
-    theme.href = "darkTheme.css";
-    // Otherwise...
-    } else {
-        // ... switch it to "light-theme.css"
-        theme.href = "lightTheme.css";
-    }
+    swapTheme();
 }
