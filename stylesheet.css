@@ -612,6 +612,7 @@ a:active {
     height: 10%;
     aspect-ratio: 1;
     max-height: 56px;
+    min-height: 42px;
     z-index: 5;
     border-radius: 36px;
     background: var(--dark-blue);
