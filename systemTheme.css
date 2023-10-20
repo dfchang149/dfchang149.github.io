@@ -35,13 +35,13 @@
 
 @media (prefers-color-scheme: light) {
     :root{
-        --highlight-white: #000000;
+        --highlight-white: #000;
         --default-white: #001129;
         --dull-blue: #4a5b77;
         --sky-blue: #334561;
         --daisy-blue: #e5ebfc;
         --light-blue: #2c4a78;
-        --highlight-blue: #ffffff;
+        --highlight-blue: #fff;
         --just-blue: #23497e;
         --desat-blue: #598fdb;
         --ocean-blue: #2e529b;
