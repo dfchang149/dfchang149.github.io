@@ -629,6 +629,7 @@ a:active {
 }
 
 #projectLabel {
+    -webkit-backdrop-filter: blur(3em);
     backdrop-filter: blur(3em);
     background-color: var(--bar-hover);
     box-shadow: 0px 4px 12px var(--purple-shade);
