@@ -170,6 +170,10 @@
         <script src="/changeTheme.js"></script>
         <script src="/scrollToTop.js"></script>
         <script src="/scrollAnimation.js"></script>
-
+        <script>
+            const profilePic = document.querySelector('.profilePicture')
+            const data = await axios('https://api.github.com/users/dfchang149');
+            profilePic.setAttribute('src', data.avatar_url);
+        </script>
     </body>
 </html>
