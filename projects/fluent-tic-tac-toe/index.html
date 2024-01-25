@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="darkTheme.css" id="themeLink">
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="/darkTheme.css" id="themeLink">
+        <link rel="stylesheet" href="/stylesheet.css">
         <title> Dustin Chang - Fluent Tic Tac Toe </title>
         <meta name="description" content="A simple game of tic tac toe, redesigned with the design principles of Fluent UI, available on the Microsoft App Store. Created by Dustin Chang.">
 
         <!-- Icons -->
-        <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets\images\apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
         
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://dfchang149.github.io/">
@@ -61,8 +61,8 @@
         </div>
         <div>
             <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
-                <button onclick="window.location.href='index.html';">About</button>
-                <button onclick="window.location.href='resumePage.html';">Resume</button>
+                <button onclick="window.location.href='/';">About</button>
+                <button onclick="window.location.href='/resume/';">Resume</button>
                 <button onmousedown="mouseDownCurrPageButton()" onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
                 id="currentPageButton">Projects</button>
             </div>
@@ -71,7 +71,7 @@
                     Go back to top
             </div>
             <div id="projectLabel" style="border-radius: 8px;">
-                <a href="projectsPage.html">Projects</a> / Fluent-Tic-Tac-Toe
+                <a href="/projects/">Projects</a> / Fluent-Tic-Tac-Toe
             </div>
         </div>
         <div class="vertical-center" id="themeButton" onclick="themeButtonPressed()">
@@ -97,14 +97,14 @@
                     <a href="https://github.com/dfchang149/Fluent-Tic-Tac-Toe" class="badge no-image center-text">
                         See Source Code
                     </a>
-                    <a href="projectsPage.html" class="badge no-image center-text">
+                    <a href="/projects/" class="badge no-image center-text">
                         Back to Projects
                     </a>
                 </div>
             </div>
             <div class="relative content-width horizontal-center justify-center" style="max-width: 960px;">
                 <div class="imageWrapper margin-top-small horizontal-center content-width animation" width="90%" style="margin-bottom: 6em;">
-                    <img class="full-width" style="border-radius: 24px;" src="assets\images\fluent-tic-tac-toe\DefaultPlayScreen.png" alt="App Screenshot">
+                    <img class="full-width" style="border-radius: 24px;" src="/assets/images/fluent-tic-tac-toe/DefaultPlayScreen.png" alt="App Screenshot">
                     <div class="imageCaption border-radius-big horizontal-center">
                         Default play screen in dark mode
                     </div>
@@ -121,7 +121,7 @@
                             Thankfully, with all the documentation of the design published by Microsoft, I was able to implement it into the app, in places such as the settings page.
                         </p>
                         <div class="imageWrapper margin-top-large horizontal-center content-width margin-bottom-medium animation">
-                            <img class="full-width" style="border-radius: 16px;" src="assets\images\fluent-tic-tac-toe\SettingsPage.png" alt="Settings Screenshot">
+                            <img class="full-width" style="border-radius: 16px;" src="/assets/images/fluent-tic-tac-toe/SettingsPage.png" alt="Settings Screenshot">
                             <div class="imageCaption border-radius-big horizontal-center">
                                 Settings page with lots of customization options
                             </div>
@@ -138,7 +138,7 @@
                             Not only did it simplify the design process, but it gave me a chance to practice making a functional game, with working logic and saving capabilities.
                         </p>
                         <div class="imageWrapper margin-top-large horizontal-center content-width margin-bottom-medium animation">
-                            <img class="full-width" style="border-radius: 16px;" src="assets\images\fluent-tic-tac-toe\WinScreen.png" alt="Winner Screenshot">
+                            <img class="full-width" style="border-radius: 16px;" src="/assets/images/fluent-tic-tac-toe/WinScreen.png" alt="Winner Screenshot">
                             <div class="imageCaption border-radius-big horizontal-center">
                                 A simple screen to indicate when the player has won
                             </div>
@@ -155,7 +155,7 @@
                             This meant straying from the comforts of Visual Studio Code as I dove into Visual Studio for the first time, and learned to incorporate the packages and frameworks needed to give the app that Windows 11 feel.
                         </p>
                         <div class="imageWrapper margin-top-large horizontal-center content-width margin-bottom-medium animation">
-                            <img class="full-width" style="border-radius: 16px;" src="assets\images\fluent-tic-tac-toe\VisualStudio.png" alt="Visual Studio Screenshot">
+                            <img class="full-width" style="border-radius: 16px;" src="/assets/images/fluent-tic-tac-toe/VisualStudio.png" alt="Visual Studio Screenshot">
                             <div class="imageCaption border-radius-big horizontal-center">
                                 A peek into the inner workings of the app
                             </div>
@@ -172,7 +172,7 @@
                             As a result, I created a system that allowed players to manipulate the board size, dynamically altering the playstyle and difficulty of the game in correspondence.
                         </p>
                         <div class="imageWrapper margin-top-large horizontal-center content-width margin-bottom-medium animation">
-                            <img class="full-width" style="border-radius: 16px;" src="assets\images\fluent-tic-tac-toe\CustomBoardSize.png" alt="Custom Board Size Screenshot">
+                            <img class="full-width" style="border-radius: 16px;" src="/assets/images/fluent-tic-tac-toe/CustomBoardSize.png" alt="Custom Board Size Screenshot">
                             <div class="imageCaption border-radius-big horizontal-center">
                                 An unusual 5x5 board size for tic-tac-toe
                             </div>
@@ -192,7 +192,7 @@
                             (Sorry in advance for the bright image, to those using dark mode)
                         </p>
                         <div class="imageWrapper margin-top-large horizontal-center content-width margin-bottom-medium animation">
-                            <img class="full-width" style="border-radius: 16px;" src="assets\images\fluent-tic-tac-toe\LightModeSettings.png" alt="Settings Screenshot">
+                            <img class="full-width" style="border-radius: 16px;" src="/assets/images/fluent-tic-tac-toe/LightModeSettings.png" alt="Settings Screenshot">
                             <div class="imageCaption border-radius-big horizontal-center">
                                 Options to switch between themes in settings
                             </div>
@@ -217,8 +217,8 @@
             </div>
         </footer>
 
-        <script src="changeTheme.js"></script>
-        <script src="scrollToTop.js"></script>
-        <script src="scrollAnimation.js"></script>
+        <script src="/changeTheme.js"></script>
+        <script src="/scrollToTop.js"></script>
+        <script src="/scrollAnimation.js"></script>
     </body>
 </html>

@@ -12,18 +12,18 @@ function loadSystemTheme(){
     // } else {
     //     themeLink.href = "lightTheme.css";
     // }
-    themeLink.href = "systemTheme.css";
+    themeLink.href = "/systemTheme.css";
 }
 
 function swapTheme() {
-    if (themeLink.getAttribute("href") == "darkTheme.css") {
-        themeLink.href = "lightTheme.css";
+    if (themeLink.getAttribute("href") == "/darkTheme.css") {
+        themeLink.href = "/lightTheme.css";
         localStorage.setItem("theme","light");
-    } else if (themeLink.getAttribute("href") == "lightTheme.css") {
+    } else if (themeLink.getAttribute("href") == "/lightTheme.css") {
         loadSystemTheme();
         localStorage.setItem("theme","system");
     } else {
-        themeLink.href = "darkTheme.css";
+        themeLink.href = "/darkTheme.css";
         localStorage.setItem("theme","dark");
     }
 }
@@ -35,5 +35,5 @@ function themeButtonPressed() {
 if(currentTheme == "system") {
     loadSystemTheme();
 } else {
-    themeLink.href = currentTheme+"Theme.css";
+    themeLink.href = "/"+currentTheme+"Theme.css";
 }

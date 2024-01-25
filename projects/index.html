@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="darkTheme.css" id="themeLink">
-        <link rel="stylesheet" href="stylesheet.css">
-        <title> Dustin Chang - Resume </title>
+        <link rel="stylesheet" href="/darkTheme.css" id="themeLink">
+        <link rel="stylesheet" href="/stylesheet.css">
+        <title> Dustin Chang - Projects </title>
         <meta name="description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
 
         <!-- Icons -->
-        <link rel="icon" type="image/x-icon" href="assets\images\favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets\images\apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
         
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://dfchang149.github.io/">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="See Dustin Chang's Resume">
+        <meta property="og:title" content="See Dustin Chang's Projects">
         <meta property="og:description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
         <meta property="og:image" content="https://github.com/dfchang149/dfchang149.github.io/blob/main/assets/images/OpenGraphImg.png?raw=true">
 
@@ -23,12 +23,15 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="dfchang149.github.io">
         <meta property="twitter:url" content="https://dfchang149.github.io/">
-        <meta name="twitter:title" content="See Dustin Chang's Resume">
+        <meta name="twitter:title" content="See Dustin Chang's Projects">
         <meta name="twitter:description" content="A Computer Science student from UCSD; currently expected to graduate by 2025 with a bachelor's degree.">
         <meta name="twitter:image" content="https://github.com/dfchang149/dfchang149.github.io/blob/main/assets/images/OpenGraphImg.png?raw=true">
 
         <!-- Meta Tags Generated via https://www.opengraph.xyz -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- To get star count (not made by me)-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="blobsContainer">
@@ -61,10 +64,10 @@
         </div>
         <div>
             <div id="pageButtons" onmouseleave="mouseLeavePageButtons()" onmouseover="mouseOverPageButtons()">
-                <button onclick="window.location.href='index.html';">About</button>
+                <button onclick="window.location.href='/';">About</button>
+                <button onclick="window.location.href='/resume/';">Resume</button>
                 <button onmousedown="mouseDownCurrPageButton()" onmouseleave="mouseLeaveCurrPageButton()" onmouseover="mouseOverCurrPageButton()" onclick="topFunction()"
-                id="currentPageButton">Resume</button>
-                <button onclick="window.location.href='projectsPage.html';">Projects</button>
+                id="currentPageButton">Projects</button>
             </div>
             <div id="goTop">
                 <div class="arrowUp horizontal-center"></div>
@@ -82,101 +85,52 @@
         <div id="contents">
             <div class="header">
                 <h1>
-                    My Resume
+                    My Projects
                 </h1>
                 <h2>
-                    A look at what I've achieved and experienced
+                    Apps and programs that I've worked on
                 </h2>
-                <div class="badgeContainer gap-medium-small margin-top-large margin-bottom-medium justify-center horizontal-center animation" style="max-width: 80%;">
-                    <a href="assets\pdfs\resume.pdf" class="badge no-image center-text">
-                        See Full Resume
-                    </a>
-                </div>
             </div>
-            <div class="flex gap-medium horizontal-center justify-center flex-row" style="width: 90%; ">
-                <div class="flex experienceContainer flex-column">
-                    <div class="container text animation">
-                        <h3> Experience </h3>
-                        <div class="flex flex-row gap-very-small">
-                            <div>
-                                <p>
-                                    <b> Freelance Lua Developer </b>
-                                </p>
-                                <p class="light" style="margin-top: -12px;">
-                                    2018 - 2020
-                                </p>
-                                <p style="margin-top: -12px;">
-                                    Has been commissioned over 20 times, and has worked on 3 game projects. Accumulated a total of over 5k unique users.
-                                </p>
-                            </div>
-                            <div>
-                                <p>
-                                    <b> C# Developer </b>
-                                </p>
-                                <p class="light" style="margin-top: -12px;">
-                                    2022 - 
-                                    <span class="badge2" style="padding-left: 8px; padding-right: 8px; border-radius: 8px;">
-                                        Present
-                                    </span>
-                                </p>
-                                <p style="margin-top: -12px;">
-                                    Created an app using the .NET framework and published it to the Microsoft app store that received over 50 downloads in less than 3 days.
-                                </p>
-                            </div>
+            <div class="flex gap-large center justify-center animation">
+                <div class="container text min-width projectCard">
+                    <div class="relative">
+                        <h3 style="vertical-align: middle;"> Fluent Tic-Tac-Toe
+                            <span class="badge2 starDisplay" data-repo="Fluent-Tic-Tac-Toe" style="margin-left: 8px;" title="GitHub stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"><path style="fill:var(--star-yellow);" d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757 c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042 c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685 c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528 c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956 C22.602,0.567,25.338,0.567,26.285,2.486z"></path></svg>
+                                <a style="transition-duration: 1s;" >
+                                    999
+                                </a>
+                            </span>
+                        </h3>
+                        <p>
+                            A simple Microsoft store app developed using WinUI 3. Made with the design principles of Fluent UI and implemented using C#.
+                        </p>
+                        <div class="badgeContainer gap-medium-small margin-top-medium margin-bottom-medium">
+                            <a href="https://www.microsoft.com/en-us/p/fluent-tictactoe/9NPFG5ZPGXZR?" class="badge no-image center-text">
+                                Download
+                            </a>
+                            <a href="/projects/fluent-tic-tac-toe/" class="badge no-image center-text">
+                                Learn More
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="flex skillsContainer flex-column">
-                    <div class="container text animation">
-                        <h3> Skills </h3>
-                        <div>
-                            <p>
-                                <b> Programming Languages: </b>
-                            </p>
-                            <div class="badgeContainer gap-very-small margin-top-medium">
-                                <div class="badge2"> Lua </div>
-                                <div class="badge2"> Java </div>
-                                <div class="badge2"> C </div>
-                                <div class="badge2"> C++ </div>
-                                <div class="badge2"> C# </div>
-                                <div class="badge2"> Javascript </div>
-                                <div class="badge2"> Python </div>
-                                <div class="badge2"> HTML </div>
-                                <div class="badge2"> CSS </div>
-                                <div class="badge2"> XAML </div>
-                                <div class="badge2"> System Verilog </div>
-                                <div class="badge2"> Assembly </div>
-                            </div>
+                    <div class="imageWrapper margin-top-small">
+                        <img class="projectImage" src="/assets/images/fluent-tic-tac-toe/DefaultPlayScreen.png" alt="GitHub Profile Picture">
+                        <div class="imageCaption horizontal-center">
+                            App screenshot with dark mode
                         </div>
-                        <div>
-                            <p>
-                                <b> Tools: </b>
-                            </p>
-                            <div class="badgeContainer gap-very-small margin-top-medium">
-                                <div class="badge2"> GitHub </div>
-                                <div class="badge2"> Git </div>
-                                <div class="badge2"> Visual Studio Code </div>
-                                <div class="badge2"> Visual Studio </div>
-                                <div class="badge2"> Figma </div>
-                                <div class="badge2"> Google sheets </div>
-                                <div class="badge2"> Blender </div>
-                                <div class="badge2"> Krita </div>
-                                <div class="badge2"> Roblox Studio </div>
-                                <div class="badge2"> JUnit </div>
-                                <div class="badge2"> JavaFX </div>
-                                <div class="badge2"> Gradle </div>
-                                <div class="badge2"> MongoDB </div>
-                                <div class="badge2"> Unix </div>
-                            </div>
+                    </div>
+                    <div class="badgeContainer gap-small margin-top-medium">
+                        <div class="badge2">
+                            C#
+                        </div><div class="badge2">
+                            .NET
                         </div>
-                        <div>
-                            <p>
-                                <b> Frameworks and Libraries: </b>
-                            </p>
-                            <div class="badgeContainer gap-very-small margin-top-medium">
-                                <div class="badge2"> .NET Core </div>
-                                <div class="badge2"> Windows App SDK </div>
-                            </div>
+                        <div class="badge2">
+                            WinUI 3
+                        </div>
+                        <div class="badge2">
+                            XAML
                         </div>
                     </div>
                 </div>
@@ -184,7 +138,7 @@
         </div>
         <footer class="footer horizontal-center">
             <div class="footerCol">
-                <p id="copyright">© <span><script>document.write( new Date().getFullYear() );</script></span> Dustin Chang</p>                 
+                <p id="copyright">© <span><script>document.write(new Date().getFullYear() );</script></span> Dustin Chang</p>                 
             </div>
             <div class="footerCol">
                 <div class="contactInfo">
@@ -198,8 +152,37 @@
             </div>
         </footer>
 
-        <script src="changeTheme.js"></script>
-        <script src="scrollToTop.js"></script>
-        <script src="scrollAnimation.js"></script>
+        <script src="/changeTheme.js"></script>
+        <script src="/scrollToTop.js"></script>
+        <script src="/scrollAnimation.js"></script>
+        <script>
+            function showStarcount(repo, starDisplay) {
+            var url = 'https://api.github.com/repos/dfchang149/' + repo;
+              axios.get(url)
+                .then(function (response) {
+                    starDisplay.innerHTML = response.data.stargazers_count;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+        
+            function repo() {
+                //var repo = document.getElementById('repo').innerHTML;
+                //var starcount = document.getElementById('getStars');
+                //getStarcount("Fluent-Tic-Tac-Toe", starcount);
+                const starDisplays = document.querySelectorAll('.starDisplay');
+
+                for (let i = 0; i < starDisplays.length; i++) {
+                    const starDisplay = starDisplays[i];
+                    const label = starDisplay.querySelector('a')
+                    const badge = starDisplay.parentElement;
+                    let repo = starDisplay.dataset.repo;
+                    showStarcount(repo,label);
+                }
+            }
+        
+            document.addEventListener('DOMContentLoaded', repo());
+        </script>
     </body>
 </html>
