@@ -151,6 +151,8 @@ a:active {
 
 .container:hover{
     background-color: var(--navy-black-hover);
+    -webkit-backdrop-filter: blur(0.5em);
+            backdrop-filter: blur(0.5em);
 }
 
 .profilePicture {
