@@ -423,8 +423,7 @@ a:active {
 
 .projectImage {
     height: auto;
-    width: 30%;
-    min-width: 20vw;
+    width: 20vw;
     border-radius: 16px;
     box-shadow: 0px 4px 24px #10062428;
     object-fit: cover;
