@@ -143,6 +143,8 @@ a:active {
     padding: 8px 8px;
     transition: all 0.5s;
     outline: #3f599275 solid 1px;
+    -webkit-backdrop-filter: blur(0.25em);
+            backdrop-filter: blur(0.25em);
 }
 
 .container.text{
@@ -178,12 +180,11 @@ a:active {
     box-shadow: 0px 4px 8px var(--purple-shade);
     border: var(--faded-blue) solid 1px;
     border-radius: 8px;
-    -webkit-backdrop-filter: blur(2em);
-            backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(1em);
+            backdrop-filter: blur(1em);
     font-size: 14px;
     width: calc(100% - 36px);
     padding: 8px 4px;
-    
     transform: translateY(-30%);
     visibility: hidden;
     transition: all 0.5s;
@@ -226,6 +227,10 @@ a:active {
     justify-content: center;
 }
 
+.justify-left {
+    justify-content: left;
+}
+
 .center-text {
     text-align: center;
 }
@@ -246,8 +251,8 @@ a:active {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--footer-blue);
-    padding: 32px 15% 32px 15%;
-    margin: 20em -8px -8px -8px;
+    padding: 16px 10% 16px 10%;
+    margin: 12em -8px -8px -8px;
 }
 
 .footerCol {
@@ -386,11 +391,12 @@ a:active {
     background-color: var(--deep-blue);
     border-radius: 32px;
     box-shadow: 0px 4px 24px var(--purple-shade);
-    padding: 4px 20px 6px 20px;
+    padding: 4px 16px 8px 16px;
     font-size: 80%;
     transition: all 0.5s;
     text-align: center;
     max-height: 16px;
+    display: inline-block;
 }
 
 .badge2 svg {
@@ -399,6 +405,7 @@ a:active {
 }
 
 .projectCard {
+    position: relative;
     transition: all 0.5s;
 }
 
@@ -415,9 +422,14 @@ a:active {
 }
 
 .projectImage {
-    height: 240px;
+    height: auto;
+    width: 30%;
+    min-width: 20vw;
     border-radius: 16px;
     box-shadow: 0px 4px 24px #10062428;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3/2;
 }
 
 .quick-trans {
@@ -469,6 +481,10 @@ a:active {
 
 .border-radius-large {
     border-radius: 24px;
+}
+
+.starDisplay {
+    padding-bottom: 10px;
 }
 
 .starDisplay svg{
@@ -733,8 +749,18 @@ a:active {
         line-height: 24px;
     }
     */
-    
 
+    .projectCard {
+        width: 40%;
+        min-width: 35vw;
+        position: relative;
+    }
+
+    .projectImage {
+        height: auto;
+        width: 100%;
+    }
+    
     .experienceContainer {
         max-width: 100%;
     }
