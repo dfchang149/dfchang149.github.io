@@ -561,6 +561,8 @@ a:active {
 }
 
 #pageButtons {
+    user-select: none;
+    -webkit-user-select: none;
     -webkit-font-smoothing: antialiased;
     -webkit-backdrop-filter: blur(3em);
             backdrop-filter: blur(3em);
