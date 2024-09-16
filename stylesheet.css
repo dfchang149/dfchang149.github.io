@@ -391,7 +391,7 @@ a:active {
     background-color: var(--deep-blue);
     border-radius: 32px;
     box-shadow: 0px 4px 24px var(--purple-shade);
-    padding: 4px 16px 8px 16px;
+    padding: 4px 16px 6px 16px;
     font-size: 80%;
     transition: all 0.5s;
     text-align: center;
@@ -407,6 +407,9 @@ a:active {
 .projectCard {
     position: relative;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .projectCard:hover {
