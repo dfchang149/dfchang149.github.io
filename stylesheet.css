@@ -252,7 +252,7 @@ a:active {
     flex-wrap: wrap;
     background-color: var(--footer-blue);
     padding: 16px 10% 16px 10%;
-    margin: 12em -8px -8px -8px;
+    margin: 25vh -8px -8px -8px;
 }
 
 .footerCol {
@@ -266,7 +266,7 @@ a:active {
 }
 
 .blobsContainer div {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 }
@@ -629,7 +629,7 @@ a:active {
     position: fixed;
     bottom: 16px;
     left: 16px;
-    height: 10%;
+    height: clamp(48px,10%,64px);
     aspect-ratio: 1;
     max-height: 56px;
     z-index: 5;
