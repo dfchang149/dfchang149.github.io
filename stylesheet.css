@@ -194,6 +194,9 @@ a:active {
 .imageWrapper {
     position: relative;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imageWrapper:hover .imageCaption {
@@ -519,6 +522,7 @@ a:active {
 
 #aboutGridContainer {
     display: grid;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
         'body1 body1'
         'body2 image'
@@ -840,8 +844,10 @@ a:active {
         max-height: -moz-max-content;
         max-height: max-content;
         max-width: 100%;
-        outline-offset: 12px;
-        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .container{
